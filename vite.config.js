@@ -4,6 +4,7 @@ import yaml from "js-yaml";
 import { dataToEsm } from "@rollup/pluginutils";
 import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
+
 /** A custom Markdown plugin for Vite, with TOML frontmatter support. */
 function markdown() {
     return {
@@ -31,4 +32,5 @@ function markdown() {
 const config = {
     plugins: [sveltekit(), pluginYaml(), markdown()],
 };
+
 export default config;
