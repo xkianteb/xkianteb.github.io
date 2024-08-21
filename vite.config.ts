@@ -4,8 +4,6 @@ import yaml from "js-yaml";
 import { dataToEsm } from "@rollup/pluginutils";
 import type { UserConfig } from "vite";
 
-import { defineConfig } from 'vite';
-
 /** A custom Markdown plugin for Vite, with TOML frontmatter support. */
 function markdown() {
   return {
