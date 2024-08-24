@@ -1,6 +1,6 @@
 <script lang="ts">
   import Seo from "$lib/components/Seo.svelte";
-  import AdviseesList from "./AdviseesList.svelte";
+  import GroupList from "./GroupList.svelte";
 </script>
 
 <Seo
@@ -9,7 +9,7 @@
 />
 
 <section class="layout-md">
-  <h2 class="heading2">Current Advisees:</h2>
-  <AdviseesList/>
+  <h2 class="heading2">Group Members:</h2>
+  <GroupList/>
 </section>
 

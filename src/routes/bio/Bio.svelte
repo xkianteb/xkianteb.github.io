@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<div class="grid grid-cols-1 gap-y-4">
+<div class="grid grid-cols-1 gap-y-0 ml-4">
   <div>
   Kianté Brantley is a Assistant Professor at<br><br>
   Postdoctoral Associate in the Department of Computer Science at Cornell University., working with Thorsten Joachims. He completed his Ph.D. in Computer Science at the University of Maryland College Park, advised by Dr. Hal Daumé III. His research focuses on developing machine learning models that can make automated decisions in the real world with minimal supervision. His research lies at the intersection of imitation learning, reinforcement learning, and natural language processing. He is a recipient of the NSF LSAMP BD Fellowship, ACM SIGHPC Computational and Data Science Fellowship, Microsoft Dissertation Research Grant, Ann G. Wylie Dissertation Fellowship, and NSF CIFellow Postdoctoral Fellowship.<br><br>

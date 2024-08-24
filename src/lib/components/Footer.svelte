@@ -1,8 +1,8 @@
-<footer class="layout-md mt-20 text-lg flex flex-col">
+<footer class="layout-md mt-16 text-lg flex flex-col">
   <div class="row anormal-font">
-    <span class="anormal-font-bold">Email</span>
+    <span class="anormal-font-bold">eMail</span>
     <hr />
-    <span href="" class="flex-none">kdbrantley AT g.harvard DOT edu</span>
+    <a href="mailto:kdbrantley@g.harvard.edu" class="flex-none alink">kdbrantley@g.harvard.edu </a>
   </div>
 
   <div class="row anormal-font">
@@ -33,7 +33,7 @@
   <div class="row anormal-font">
     <span class="flex-none anormal-font-bold">Office</span>
     <hr />
-    <span class="flex-none" href="">150 Western Av. Room 2-332, Allston MA 02134</span>
+    <span class="flex-none" href="">150 Western Av., Allston MA 02134</span>
   </div>
 </footer>
 

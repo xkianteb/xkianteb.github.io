@@ -46,7 +46,7 @@
   const toggle = (i) => is_visible[i] = !is_visible[i];
 </script>
 
-<div class="grid gap-y-0">
+<div class="grid gap-y-0 ml-4">
   <!-- If statement to decide on to add year seperators -->
   {#each data as item, i}
     {#if doOrder()}

@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<div class="grid grid-cols-[15%_30%_15%_30%] gap-4">
+<div class="grid grid-cols-[22%_25%_22%_25%] gap-2 ml-4">
   <div class="text-sm font-bold font-sans">
     <img class="object-cover w-[114px] h-[127px]" src="/assets/images/kiante.jpg" alt="">
   </div>

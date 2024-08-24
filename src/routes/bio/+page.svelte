@@ -18,8 +18,8 @@
 />
 
 <section class="layout-md mb-4">
-  <div class="anormal-font-bold">
-      You can download a PDF of my CV <a class="alink" href="/assets/pdf/kiante_brantley.pdf">here</a>.
+  <div class="anormal-font-bold mb-8">
+      You can view my CV <a class="alink" href="/assets/pdf/kiante_brantley.pdf">Here</a>.
   </div>
  </section>
 

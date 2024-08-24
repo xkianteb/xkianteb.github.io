@@ -16,6 +16,7 @@
 />
 
 <section class="layout-md">
+  <h2 class="heading2">Talks:</h2>
   <TalkList data={bibTalkArr} dataOrder={dataOrder}/>
 </section>
 

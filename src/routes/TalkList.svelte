@@ -43,7 +43,7 @@
   }
 </script>
 
-<div class="grid gap-y-0">
+<div class="grid gap-y-0 ml-4">
   {#each data as item}
     {#if doOrder()}
        {#if !isCurrentYear(item.YEAR)}
