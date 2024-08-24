@@ -1,6 +1,5 @@
 <script lang="ts">
   import Seo from "$lib/components/Seo.svelte";
-  import { setContext } from 'svelte'
   import type { PageData } from './$types'
  
   import PublicationList from "./PublicationList.svelte";

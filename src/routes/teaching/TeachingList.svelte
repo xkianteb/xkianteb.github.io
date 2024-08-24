@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <div class="grid gap-y-1">
 
 <div class="grid grid-cols-[15%_15%_34%_34%] gap-y-4 ml-4">
