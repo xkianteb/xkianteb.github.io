@@ -78,7 +78,7 @@
 
       {#if item.NOTE}
         <div class="leading-snug anormal-font">
-          {item.NOTE}
+          -- {item.NOTE} --
         </div>
       {/if}
 
