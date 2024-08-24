@@ -1,19 +1,21 @@
 <footer class="layout-md mt-20 text-lg flex flex-col">
-  <div class="row">
+  <!--
+  <div class="row text-sm">
     <span>Twitter</span>
     <hr />
     <a class="link" href="https://twitter.com/xkianteb">@xkianteb</a>
   </div>
-  <div class="row">
+  <div class="row text-sm">
     <span>GitHub</span>
     <hr />
     <a class="link" href="https://github.com/xkianteb">@xkianteb</a>
   </div>
-  <div class="row">
+  <div class="row text-sm">
     <span>Email</span>
     <hr />
     <a class="link" href="mailto:kdbrantley@g.harvard.edu">kdbrantley@g.harvard.edu</a>
   </div>
+  -->
 </footer>
 
 <style lang="postcss">

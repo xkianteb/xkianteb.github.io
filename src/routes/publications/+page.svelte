@@ -1,19 +1,13 @@
 <script lang="ts">
   import Seo from "$lib/components/Seo.svelte";
-  import WritingList from "./WritingList.svelte";
+  import PublicationList from "./../PublicationList.svelte";
   import bibtexParse from 'bibtex-parse'
+  import type { PageData } from './$types'
 
-  //import bibfile from '/src/bibfile.bib';
+  export let data: PageData
 
-
-  import fs from 'fs'
-  import path from 'path'
-  
-  // Let's say your json is in /public/assets/my-json.json
-  const bibtex = fs.readFileSync('bibfile.bib', { encoding: 'utf8', flag: 'r' });
-  //const json = fs.readFileSync(bibtex);
-
-  const bibArr = bibtexParse.entries(bibtex)
+  const bibArr= bibtexParse.entries(data.bibtex)
+  export const dataOrder = 'year'
 </script>
 
 <Seo
@@ -22,6 +16,6 @@
 />
 
 <section class="layout-md">
-  <h2 class="heading2">Publications</h2>
-  <WritingList data={bibArr} />
+  <PublicationList data={bibArr} dataOrder={dataOrder}/>
 </section>
+

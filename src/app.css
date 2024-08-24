@@ -22,6 +22,10 @@
   .heading2 {
     @apply text-black text-xl font-semibold mb-4;
   }
+  .heading2centered {
+    @apply text-center text-black text-xl font-semibold mb-4;
+  }
+
 }
 
 html {
