@@ -18,8 +18,8 @@
 />
 
 <section class="layout-md mb-4">
-  <div class="text-sm font-bold font-sans">
-      You can download a PDF of my CV <a class="over:cursor-pointer hover:bg-neutral-300 transition-colors" href="/assets/pdf/kiante_brantley.pdf">[here]</a>.
+  <div class="anormal-font-bold">
+      You can download a PDF of my CV <a class="alink" href="/assets/pdf/kiante_brantley.pdf">here</a>.
   </div>
  </section>
 
@@ -28,12 +28,7 @@
   <Bio/>
 </section>
 
-<section class="layout-md mb-5">
-  <h2 class="heading2">Contact Information:</h2>
-   <Contact Information/>
-</section>
-
-<section class="layout-md mb-4">
+<section class="layout-md">
   <h2 class="heading2">Representative Publications:</h2>
   <PublicationList data={bibArr} dataFilter={dataFilter}/>
 </section>

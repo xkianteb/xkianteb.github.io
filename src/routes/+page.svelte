@@ -4,7 +4,7 @@
   import type { PageData } from './$types'
  
   import PublicationList from "./PublicationList.svelte";
-  import RecentTalkList from "./RecentTalkList.svelte";
+  import TalkList from "./TalkList.svelte";
   import Contact from "./Contact.svelte";
 
   import bibtexParse from 'bibtex-parse'
@@ -15,7 +15,6 @@
   const bibTalkArr = bibtexParse.entries(data.talks)
 
   export const dataFilter = 'recent';
-  export const dataOrder = ''
 </script>
 
 <Seo
@@ -52,17 +51,10 @@
 
 <section class="layout-md mb-5">
   <h2 class="heading2">Recent Publications:</h2>
-   <PublicationList data={bibPubArr} dataFilter={dataFilter} dataOrder={dataOrder}/>
+   <PublicationList data={bibPubArr} dataFilter={dataFilter}/>
 </section>
 
-<section class="layout-md mb-5">
+<section class="layout-md">
   <h2 class="heading2">Recent Talks:</h2>
-   <RecentTalkList data={bibTalkArr}/>
+   <TalkList data={bibTalkArr} dataFilter={dataFilter}/>
 </section>
-
-<section class="layout-md mb-5">
-  <h2 class="heading2">Contact Information:</h2>
-   <Contact Information/>
-</section>
-
-

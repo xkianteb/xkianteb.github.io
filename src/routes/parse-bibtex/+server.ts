@@ -1,5 +1,4 @@
 import { readFile } from 'fs'
-import { marked } from 'marked'
 import type { RequestHandler } from './$types'
 import bibtexParse from 'bibtex-parse'
 

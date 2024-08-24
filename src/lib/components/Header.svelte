@@ -8,7 +8,6 @@
     { name: "advisees", href: "/advisees" },
     { name: "bio", href: "/bio" },
     { name: "talks", href: "/talks" },
-    { name: "contact", href: "/contact" },
   ];
 
   let pageTitle: string | null = null;

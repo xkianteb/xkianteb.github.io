@@ -43,3 +43,31 @@ body {
 .dark {
   color-scheme: dark;
 }
+
+.alink {
+ @apply hover:cursor-pointer hover:bg-neutral-300 transition-colors underline underline-offset-2;
+}
+
+.anormal-font {
+ @apply font-sans text-sm;
+}
+
+.asmall-font {
+ @apply font-sans text-xs;
+}
+
+.anormal-font-bold {
+ @apply font-sans text-sm font-bold;
+}
+
+.anormal-font-semibold {
+ @apply font-sans text-sm font-semibold;
+}
+
+.contact-labels {
+  @apply text-right;
+}
+
+.contact-values {
+  @apply text-left;
+}

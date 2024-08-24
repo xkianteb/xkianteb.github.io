@@ -1,21 +1,40 @@
 <footer class="layout-md mt-20 text-lg flex flex-col">
-  <!--
-  <div class="row text-sm">
-    <span>Twitter</span>
+  <div class="row anormal-font">
+    <span class="anormal-font-bold">Email</span>
     <hr />
-    <a class="link" href="https://twitter.com/xkianteb">@xkianteb</a>
+    <span href="" class="flex-none">kdbrantley AT g.harvard DOT edu</span>
   </div>
-  <div class="row text-sm">
-    <span>GitHub</span>
+
+  <div class="row anormal-font">
+    <span class="anormal-font-bold">Twitter</span>
+    <hr />
+    <a class="link flex-none" href="https://twitter.com/xkianteb">@xkianteb</a>
+  </div>
+
+  <div class="row anormal-font">
+    <span class="anormal-font-bold">GitHub</span>
     <hr />
     <a class="link" href="https://github.com/xkianteb">@xkianteb</a>
   </div>
-  <div class="row text-sm">
-    <span>Email</span>
+
+
+  <div class="row anormal-font">
+    <span class="anormal-font-bold">LinkedIn</span>
     <hr />
-    <a class="link" href="mailto:kdbrantley@g.harvard.edu">kdbrantley@g.harvard.edu</a>
+    <a class="flex-none link" href="https://www.linkedin.com/in/kiante">kiante</a>
   </div>
-  -->
+
+  <div class="row anormal-font">
+    <span class="anormal-font-bold">Phone</span>
+    <hr />
+    <span class="flex-none"> </span>
+  </div>
+
+  <div class="row anormal-font">
+    <span class="flex-none anormal-font-bold">Office</span>
+    <hr />
+    <span class="flex-none" href="">150 Western Av. Room 2-332, Allston MA 02134</span>
+  </div>
 </footer>
 
 <style lang="postcss">
