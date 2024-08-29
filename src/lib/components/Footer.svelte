@@ -33,7 +33,7 @@
   <div class="row anormal-font">
     <span class="flex-none anormal-font-bold">Office</span>
     <hr />
-    <span class="flex-none" href="">150 Western Av., Allston MA 02134</span>
+    <span class="flex-none" href="">150 Western Av., Room 6.141, Allston MA 02134</span>
   </div>
 </footer>
 

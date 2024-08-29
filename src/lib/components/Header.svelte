@@ -62,7 +62,7 @@
       <div class="anormal-font">
         <br> <span class="anormal-font-bold text-black">Assistant Professor 
         <br> <a href="https://kempnerinstitute.harvard.edu" class="alink">Kempner Institute</a> and <a href="https://seas.harvard.edu" class="alink">School of Engineering and Applied Sciences (SEAS) Harvard University</a></span>
-        <br> 150 Western Av., Allston MA 02134
+        <br> 150 Western Av., Room 6.141, Allston MA 02134
         <br><br> 
         <a href="mailto:kdbrantley@g.harvard.edu" class="alink">[kdbrantley@g.harvard.edu]</a>
         <a class="alink" href="/assets/pdf/kiante_brantley.pdf">[CV]</a>
