@@ -6,10 +6,12 @@
   <div class="text-sm font-bold font-sans">Title:</div>
   <div class="text-sm font-bold font-sans">Topics:</div>
 
-  <div class="text-sm">S 2024</div>
-  <div class="text-sm">CMSC 116</div>
-  <div class="text-sm">You and I, and Generative AI</div>
-  <div class="text-sm">Robustness, uncertainty, transparency, fairness, etc.</div>
+  <!--
+  <div class="text-sm">[Semester] [Year]</div>
+  <div class="text-sm">[Course]</div>
+  <div class="text-sm">[Title]</div>
+  <div class="text-sm">[Topic]</div>
+  -->
 </div>
 
 </div>
