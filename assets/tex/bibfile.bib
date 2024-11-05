@@ -341,7 +341,7 @@ long-
   year={2024},
   abstract={Reinforcement Learning (RL) from Human Preference-based feedback is a popular paradigm for fine-tuning generative models, which has produced impressive models such as GPT-4 and Claude3 Opus. This framework often consists of two steps: learning a reward model from an offline preference dataset followed by running online RL to optimize the learned reward model. In this work, leveraging the idea of reset, we propose a new RLHF algorithm with provable guarantees. Motivated by the fact that offline preference dataset provides informative states (i.e., data that is preferred by the labelers), our new algorithm, Dataset Reset Policy Optimization (DR-PO), integrates the existing offline preference dataset into the online policy training procedure via dataset reset: it directly resets the policy optimizer to the states in the offline dataset, instead of always starting from the initial state distribution. In theory, we show that DR-PO learns to perform at least as good as any policy that is covered by the offline dataset under general function approximation with finite sample complexity. In experiments, we demonstrate that on both the TL;DR summarization and the Anthropic Helpful Harmful (HH) dataset, the generation from DR-PO is better than that from Proximal Policy Optimization (PPO) and Direction Preference Optimization (DPO), under the metric of GPT4 win-rate. Code for this work can be found at https://github.com/Cornell-RL/drpo.}, 
   url={https://arxiv.org/abs/2404.08495},
-  keywords={preprint, recent}
+  keywords={preprint, recent/}
 }
 
 @inproceedings{brantley2024rl,
@@ -352,7 +352,7 @@ long-
   year={2024},
   abstract="Reinforcement learning (RL) has improved guided image generation with diffusion models by directly optimizing rewards that capture image quality, aesthetics, and instruction following capabilities. However, the resulting generative policies inherit the same iterative sampling process of diffusion models that causes slow generation. To overcome this limitation, consistency models proposed learning a new class of generative models that directly map noise to data, resulting in a model that can generate an image in as few as one sampling iteration. In this work, to optimize text-to-image generative models for task specific rewards and enable fast training and inference, we propose a framework for fine-tuning consistency models via RL. Our framework, called Reinforcement Learning for Consistency Model (RLCM), frames the iterative inference process of a consistency model as an RL procedure. RLCM improves upon RL fine-tuned diffusion models on text-to-image generation capabilities and trades computation during inference time for sample quality. Experimentally, we show that RLCM can adapt text-to-image consistency models to objectives that are challenging to express with prompting, such as image compressibility, and those derived from human feedback, such as aesthetic quality. Comparing to RL finetuned diffusion models, RLCM trains significantly faster, improves the quality of the generation measured under the reward objectives, and speeds up the inference procedure by generating high quality images with as few as two inference steps. Our code is available at https://rlcm.owenoertell.com",
   url={https://arxiv.org/abs/2404.03673},
-  keywords={preprint, recent}
+  keywords={preprint}
 }
 
 @inproceedings{brantley2024surprising,
@@ -366,7 +366,7 @@ long-
   keywords={preprint}
 }
 
-@inproceedings{gao2024reviewer2,
+@inproceedings{brantley2024reviewer2,
   title={Reviewer2: Optimizing Review Generation Through Prompt Generation},
   author={Gao, Zhaolin and Brantley, Kianté and Joachims, Thorsten},
   booktitle=PREPRINT,
@@ -374,5 +374,38 @@ long-
   year={2024},
   abstract={Recent developments in LLMs offer new opportunities for assisting authors in improving their work. In this paper, we envision a use case where authors can receive LLM-generated reviews that uncover weak points in the current draft. While initial methods for automated review generation already exist, these methods tend to produce reviews that lack detail, and they do not cover the range of opinions that human reviewers produce. To address this shortcoming, we propose an efficient two-stage review generation framework called Reviewer2. Unlike prior work, this approach explicitly models the distribution of possible aspects that the review may address. We show that this leads to more detailed reviews that better cover the range of aspects that human reviewers identify in the draft. As part of the research, we generate a large-scale review dataset of 27k papers and 99k reviews that we annotate with aspect prompts, which we make available as a resource for future research.},
   url={https://arxiv.org/abs/2402.10886},
+  keywords={preprint}
+}
+
+@inproceedings{brantley2024regressing,
+  title={Regressing the Relative Future: Efficient Policy Optimization for Multi-turn RLHF},
+  author={Gao, Zhaolin and Zhan, Wenhao and Chang, Jonathan D and Swamy, Gokul and Brantley, Kianté and Lee, Jason D and Sun, Wen},
+  booktitle=PREPRINT,
+  shorttitle=PREPRINT,
+  year={2024},
+  abstract={Large Language Models (LLMs) have achieved remarkable success at tasks like summarization that involve a single turn of interaction. However, they can still struggle with multi-turn tasks like dialogue that require long-term planning. Previous works on multi-turn dialogue extend single-turn reinforcement learning from human feedback (RLHF) methods to the multi-turn setting by treating all prior dialogue turns as a long context. Such approaches suffer from covariate shift: the conversations in the training set have previous turns generated by some reference policy, which means that low training error may not necessarily correspond to good performance when the learner is actually in the conversation loop. In response, we introduce REgressing the RELative FUture (REFUEL), an efficient policy optimization approach designed to address multi-turn RLHF in LLMs. REFUEL employs a single model to estimate Q-values and trains on self-generated data, addressing the covariate shift issue. REFUEL frames the multi-turn RLHF problem as a sequence of regression tasks on iteratively collected datasets, enabling ease of implementation. Theoretically, we prove that REFUEL can match the performance of any policy covered by the training set. Empirically, we evaluate our algorithm by using Llama-3.1-70B-it to simulate a user in conversation with our model. REFUEL consistently outperforms state-of-the-art methods such as DPO and REBEL across various settings. Furthermore, despite having only 8 billion parameters, Llama-3-8B-it fine-tuned with REFUEL outperforms Llama-3.1-70B-it on long multi-turn dialogues.},  
+  url={https://arxiv.org/pdf/2410.04612},
+  keywords={preprint, recent},
+}
+
+@inproceedings{monea2024llms,
+  title={LLMs Are In-Context Reinforcement Learners},
+  author={Monea, Giovanni and Bosselut, Antoine and Brantley, Kianté and Artzi, Yoav},
+  booktitle=PREPRINT,
+  shorttitle=PREPRINT,
+  year={2024},
+  abstract={Large Language Models (LLMs) can learn new tasks through in-context supervised learning (i.e., ICL). This work studies if this ability extends to in-context reinforcement learning (ICRL), where models are not given gold labels in context, but only their past predictions and rewards. We show that a naive application of ICRL fails miserably, and identify the root cause as a fundamental deficiency at exploration, which leads to quick model degeneration. We propose an algorithm to address this deficiency by increasing test-time compute, as well as a compute-bound approximation. We use several challenging classification tasks to empirically show that our ICRL algorithms lead to effective learning from rewards alone, and analyze the characteristics of this ability and our methods. Overall, our results reveal remarkable ICRL abilities in LLMs.},
+  url={https://arxiv.org/pdf/2410.05362},
+  keywords={preprint}
+}
+
+@article{wu2024diffusing,
+  title={Diffusing States and Matching Scores: A New Framework for Imitation Learning},
+  author={Wu, Runzhe and Chen, Yiding and Swamy, Gokul and Brantley, Kiant{\'e} and Sun, Wen},
+  booktitle=PREPRINT,
+  shorttitle=PREPRINT,
+  year={2024},
+  abstract={Adversarial Imitation Learning is traditionally framed as a two-player zero-sum game between a learner and an adversarially chosen cost function, and can therefore be thought of as the sequential generalization of a Generative Adversarial Network (GAN). A prominent example of this framework is Generative Adversarial Imitation Learning (GAIL). However, in recent years, diffusion models have emerged as a non-adversarial alternative to GANs that merely require training a score function via regression, yet produce generations of a higher quality. In response, we investigate how to lift insights from diffusion modeling to the sequential setting. We propose diffusing states and performing score-matching along diffused states to measure the discrepancy between the expert's and learner's states. Thus, our approach only requires training score functions to predict noises via standard regression, making it significantly easier and more stable to train than adversarial methods. Theoretically, we prove first- and second-order instance-dependent bounds with linear scaling in the horizon, proving that our approach avoids the compounding errors that stymie offline approaches to imitation learning. Empirically, we show our approach outperforms GAN-style imitation learning baselines across various continuous control problems, including complex tasks like controlling humanoids to walk, sit, and crawl.},
+  url={https://arxiv.org/pdf/2410.13855},
   keywords={preprint}
 }
