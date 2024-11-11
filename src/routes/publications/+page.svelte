@@ -17,7 +17,7 @@
 
 <section class="layout-md mb-4">
   <div class="anormal-font-bold mb-8">
-      You can view my full list of publications at [<a class="anormal-font link" href="https://scholar.google.com/citations?user=8S5AOggAAAAJ&hl=en">Google Scholar</a> or <a class="anormal-font link" href="https://www.semanticscholar.org/author/Kianté-Brantley/11963742">Semantic Scholar</a>].
+      You can view my full list of publications at [<a class="anormal-font alink" href="https://scholar.google.com/citations?user=8S5AOggAAAAJ&hl=en">Google Scholar</a> or <a class="anormal-font alink" href="https://www.semanticscholar.org/author/Kianté-Brantley/11963742">Semantic Scholar</a>].
   </div>
  </section>
 

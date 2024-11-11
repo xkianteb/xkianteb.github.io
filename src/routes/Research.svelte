@@ -1,3 +1,3 @@
 <div class="ml-4">
-  I am an Assistant Professor of Computer Science at Kempner Institute and School of Engineering and Applied Sciences (SEAS), Harvard University. I study imitation learning and interactive learning—or, more broadly, settings that involve a feedback loop between a machine learning agent and the input the machine learning agent sees.
+I am an Assistant Professor of Computer Science at Kempner Institute and School of Engineering and Applied Sciences (SEAS), Harvard University. My research focuses on problems at the intersection of machine learning and interactive decision-making, with the goal of improving the decision-making capabilities of foundation models. This involves studying, building, and improving techniques in reinforcement learning, imitation learning, and natural language processing.
 </div>
