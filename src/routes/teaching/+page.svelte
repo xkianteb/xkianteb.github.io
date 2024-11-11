@@ -4,8 +4,8 @@
 </script>
 
 <Seo
-  title="Kiant&eacute; Brantley – Publications"
-  description="Academic Publications"
+  title="Kiant&eacute; Brantley – Teaching"
+  description="Teaching"
 />
 
 <section class="layout-md">

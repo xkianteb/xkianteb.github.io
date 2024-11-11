@@ -13,8 +13,8 @@
 </script>
 
 <Seo
-  title="Kiant&eacute; Brantley – Publications"
-  description="Academic Publications"
+  title="Kiant&eacute; Brantley – Bio"
+  description="Bio"
 />
 
 <section class="layout-md mb-4">
