@@ -1,3 +1,13 @@
+@unpublished{brantley2024MIT,
+  author={Kianté Brantley},
+  title={Eﬃcient Policy Optimization
+Techniques for LLMs},
+  month={},
+  year={2024},
+  note={MIT},
+  url={/assets/pdf/2024_mit_efficient_policy.pdf}
+}
+
 @unpublished{brantley2024GWU,
   author={Kianté Brantley},
   title={Learning from Interaction},
@@ -93,13 +103,14 @@
 }
 
 @unpublished{brantley2024NE,
-  author={Kiané Brantley},
+  author={Kianté Brantley},
   title={Learning from Interaction},
   month={},
   year={2024},
   note={Northeastern},
   url={/assets/pdf/learning_from_interaction.pdf}
 }
+
 
 @unpublished{brantley2024UoIC,
   author={Kianté Brantley},
