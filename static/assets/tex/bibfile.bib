@@ -1,6 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Long Book Title
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@string{long-RLC = "Reinforcement Learning Conference"}
 @string{long-jour-jasa   = "Journal of the American Statistical Association (JASA)"}
 @string{long-jour-jcgs   = "Journal of Computational and Graphical Statistics (JCGS)"}
 @string{long-jour-cjs    = "Canadian Journal of Statistics (CJS)"}
@@ -54,6 +55,7 @@ long-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Short Book Title
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@string{RLC = "RLC"}
 @string{jour-jasa   = "JASA)"}
 @string{jour-jcgs   = "JCGS)"}
 @string{jour-cjs    = "CJS)"}
@@ -110,7 +112,7 @@ long-
 %% Publications 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-@article{wu2024diffusing,
+@inproceedings{wu2024diffusing,
   title={Diffusing States and Matching Scores: A New Framework for Imitation Learning},
   author={Wu, Runzhe and Chen, Yiding and Swamy, Gokul and Brantley, Kiant{\'e} and Sun, Wen},
   booktitle=PREPRINT,
@@ -159,12 +161,11 @@ long-
 @inproceedings{brantley2024rl,
   title={RL for Consistency Models: Faster Reward Guided Text-to-Image Generation},
   author={Oertell, Owen and Chang, Jonathan D and Zhang, Yiyi and Brantley, Kianté and Sun, Wen},
-  booktitle=PREPRINT,
-  shorttitle=PREPRINT,
+  booktitle=long-RLC,
+  shorttitle=RLC,
   year={2024},
   abstract="Reinforcement learning (RL) has improved guided image generation with diffusion models by directly optimizing rewards that capture image quality, aesthetics, and instruction following capabilities. However, the resulting generative policies inherit the same iterative sampling process of diffusion models that causes slow generation. To overcome this limitation, consistency models proposed learning a new class of generative models that directly map noise to data, resulting in a model that can generate an image in as few as one sampling iteration. In this work, to optimize text-to-image generative models for task specific rewards and enable fast training and inference, we propose a framework for fine-tuning consistency models via RL. Our framework, called Reinforcement Learning for Consistency Model (RLCM), frames the iterative inference process of a consistency model as an RL procedure. RLCM improves upon RL fine-tuned diffusion models on text-to-image generation capabilities and trades computation during inference time for sample quality. Experimentally, we show that RLCM can adapt text-to-image consistency models to objectives that are challenging to express with prompting, such as image compressibility, and those derived from human feedback, such as aesthetic quality. Comparing to RL finetuned diffusion models, RLCM trains significantly faster, improves the quality of the generation measured under the reward objectives, and speeds up the inference procedure by generating high quality images with as few as two inference steps. Our code is available at https://rlcm.owenoertell.com",
   url={https://arxiv.org/abs/2404.03673},
-  keywords={preprint}
 }
 
 @inproceedings{brantley2024rebel,
@@ -245,7 +246,7 @@ long-
 
 @inproceedings{brantley2023interactive,
   title={Interactive Text Generation},
-  author={Faltings, Felix and Galley, Michel and Brantley, Kianté and Peng, Baolin and Cai, Weixin and Zhang, Yizhe and Gao, Jianfeng and Dolan, William B},
+  author={Faltings, Felix and Galley, Michel and Brantley, Kianté and Peng, Baolin and Cai, Weixin and Zhang, Yizhe and Gao, Jianfeng and Dolan, William Bill},
   booktitle=long-EMNLP,
   shorttitle=EMNLP,
   pages={4450--4468},
