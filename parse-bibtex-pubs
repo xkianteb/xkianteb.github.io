@@ -115,7 +115,7 @@ long-e
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 @inproceedings{espinosa2025scaling,
   title={Scaling Offline RL via Efficient and Expressive Shortcut Models},
-  author={Espinosa-Dice, Nicolas and Zhang, Yiyi and Chen, Yiding and Guo, Bradley and Oertell, Owen and Swamy, Gokul and Brantley, Kiante and Sun, Wen},
+  author={Espinosa-Dice, Nicolas and Zhang, Yiyi and Chen, Yiding and Guo, Bradley and Oertell, Owen and Swamy, Gokul and Brantley, Kianté and Sun, Wen},
   booktitle=PREPRINT,
   shorttitle=PREPRINT,
   year={2025},
@@ -126,7 +126,7 @@ long-e
 
 @inproceedings{brantley2025accelerating,
   title={Accelerating RL for LLM Reasoning with Optimal Advantage Regression},
-  author={Brantley, Kiant{\'e} and Chen, Mingyu and Gao, Zhaolin and Lee, Jason D and Sun, Wen and Zhan, Wenhao and Zhang, Xuezhou},
+  author={Brantley, Kianté and Chen, Mingyu and Gao, Zhaolin and Lee, Jason D and Sun, Wen and Zhan, Wenhao and Zhang, Xuezhou},
   booktitle=PREPRINT,
   shorttitle=PREPRINT,
   year={2025},
@@ -140,7 +140,7 @@ long-e
   booktitle=PREPRINT,
   shorttitle=PREPRINT,
   year={2025},
-  author={Wang, Kaiwen and Zhou, Jin Peng and Chang, Jonathan and Gao, Zhaolin and Kallus, Nathan and Brantley, Kiant{\'e} and Sun, Wen},
+  author={Wang, Kaiwen and Zhou, Jin Peng and Chang, Jonathan and Gao, Zhaolin and Kallus, Nathan and Brantley, Kianté and Sun, Wen},
   abstract={In this paper, we propose a simple and efficient method for value model training on long-context reasoning traces. Compared to existing process reward models (PRMs), our method does not require a fine-grained notion of ``step,'' which is difficult to define for long-context reasoning models. By collecting a dataset of 2.5 million reasoning traces, we train a 1.5B token-level value model and apply it to DeepSeek models for improved performance with test-time compute scaling. We find that block-wise value-guided search (VGS) with a final weighted majority vote achieves better test-time scaling than standard methods such as majority voting or best-of-n. With an inference budget of 64 generations, VGS with DeepSeek-R1-Distill-1.5B achieves an average accuracy of 45.7\% across four competition math benchmarks (AIME 2024 & 2025, HMMT Feb 2024 & 2025), reaching parity with o3-mini-medium. Moreover, VGS significantly reduces the inference FLOPs required to achieve the same performance of majority voting.},
   url={https://arxiv.org/pdf/2505.17373},
   keywords={preprint, recent}
@@ -151,7 +151,7 @@ long-e
   booktitle=PREPRINT,
   shorttitle=PREPRINT,
   year={2025},
-  author={Zhou, Jin Peng and Wang, Kaiwen and Chang, Jonathan and Gao, Zhaolin and Kallus, Nathan and Weinberger, Kilian Q and Brantley, Kiant{\'e} and Sun, Wen},
+  author={Zhou, Jin Peng and Wang, Kaiwen and Chang, Jonathan and Gao, Zhaolin and Kallus, Nathan and Weinberger, Kilian Q and Brantley, Kianté and Sun, Wen},
   abstract={Reinforcement learning (RL) post-training is crucial for LLM alignment and reasoning, but existing policy-based methods, such as PPO and DPO, can fall short of fixing shortcuts inherited from pre-training. In this work, we introduce Q♯, a value-based algorithm for KL-regularized RL that guides the reference policy using the optimal regularized Q function. We propose to learn the optimal Q function using distributional RL on an aggregated online dataset. Unlike prior value-based baselines that guide the model using unregularized Q-values, our method is theoretically principled and provably learns the optimal policy for the KL-regularized RL problem. Empirically, Q♯ outperforms prior baselines in math reasoning benchmarks while maintaining a smaller KL divergence to the reference policy. Theoretically, we establish a reduction from KL-regularized RL to no-regret online learning, providing the first bounds for deterministic MDPs under only realizability. Thanks to distributional RL, our bounds are also variance-dependent and converge faster when the reference policy has small variance. In sum, our results highlight Q♯ as an effective approach for post-training LLMs, offering both improved performance and theoretical guarantees. The code can be found at https://github.com/jinpz/q_sharp.},
   url={https://arxiv.org/pdf/2502.20548},
   keywords={preprint, recent}
@@ -159,7 +159,7 @@ long-e
 
 @inproceedings{wu2024diffusing,
   title={Diffusing States and Matching Scores: A New Framework for Imitation Learning},
-  author={Wu, Runzhe and Chen, Yiding and Swamy, Gokul and Brantley, Kiant{\'e} and Sun, Wen},
+  author={Wu, Runzhe and Chen, Yiding and Swamy, Gokul and Brantley, Kianté and Sun, Wen},
   booktitle=long-ICLR,
   shorttitle=ICLR,
   year={2024},
