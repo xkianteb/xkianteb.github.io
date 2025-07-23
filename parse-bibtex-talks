@@ -1,7 +1,36 @@
+@unpublished{brantley2025CCC,
+  author={Kianté Brantley},
+  title={The Power of Resets!},
+  month={},
+  year={2025},
+  note={CCC Computing Futures Symposium},
+  url={/assets/pdf/2025_resets.pdf},
+  keywords={recent, thepowerofresets},
+}
+
+@unpublished{brantley202Google,
+  author={Kianté Brantley},
+  title={The Power of Resets!},
+  month={},
+  year={2025},
+  note={Google},
+  url={/assets/pdf/2025_resets.pdf},
+  keywords={recent, thepowerofresets},
+}
+
+@unpublished{brantley2025Simon,
+  author={Kianté Brantley},
+  title={The Power of Resets!},
+  month={},
+  year={2025},
+  note={Berkeley Simons Institute: The Future of Language Models and Transformers},
+  url={/assets/pdf/2025_resets.pdf},
+  keywords={recent, thepowerofresets},
+}
+
 @unpublished{brantley2025NSF,
   author={Kianté Brantley},
-  title={Eﬃcient Policy Optimization
-Techniques for LLMs},
+  title={Eﬃcient Policy Optimization Techniques for LLMs},
   month={},
   year={2025},
   note={NSF RL Workshop Panel},
@@ -11,13 +40,12 @@ Techniques for LLMs},
 
 @unpublished{brantley2024MIT,
   author={Kianté Brantley},
-  title={Eﬃcient Policy Optimization
-Techniques for LLMs},
+  title={Eﬃcient Policy Optimization Techniques for LLMs},
   month={},
   year={2024},
   note={MIT},
   url={/assets/pdf/2024_mit_efficient_policy.pdf},
-  keywords={recent, efficientpolicyoptimization},
+  keywords={efficientpolicyoptimization},
 }
 
 @unpublished{brantley2024GWU,
@@ -87,7 +115,7 @@ Techniques for LLMs},
   year={2024},
   note={Rutgers University},
   url={/assets/pdf/learning_from_interaction.pdf},
-  keywords={recent, learningfrominteraction}
+  keywords={learningfrominteraction}
 }
 
 @unpublished{brantley2024Princeton,
@@ -117,7 +145,7 @@ Techniques for LLMs},
   year={2024},
   note={University of Michigan},
   url={/assets/pdf/learning_from_interaction.pdf},
-  keywords={recent, learningfrominteraction}
+  keywords={learningfrominteraction}
 }
 
 @unpublished{brantley2024NE,

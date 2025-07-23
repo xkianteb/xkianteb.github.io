@@ -26,6 +26,7 @@ long-
 @string{long-COLING = "Proceedings of the International Conference on Computational Linguistics (COLING)"}
 @string{long-COLINGACL = "Proceedings of the Joint International Conference on Computational Linguistics and Association of Computational Linguistics (COLING/ACL)"}
 @string{long-CIKM = "Processing of the Conference on Information and Knowledge Management (CIKM)"}
+@string{long-COLM = "Conference On Language Modeling"}
 @string{long-SIGIR = "Proceedings of the Conference on Research and Developments in Information Retrieval (SIGIR)"}
 @string{long-IJCAI = "Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI)"}
 @string{long-ICASSP= "Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"}
@@ -35,7 +36,7 @@ long-
 @string{long-AMTA  = "Proceedings of the Conference of the Association for Machine Translation in the Americas (AMTA)"}
 @string{long-KDD   = "Conference on Knowledge Discovery and Data Mining (KDD)"}
 @string{long-CHI   = "Proceedings of the {SIGCHI} Conference on Human Factors in Computing Systems (CHI)"}
-long-
+long-e
 @string{long-JMLR  = "Journal of Machine Learning Research (JMLR)"}
 @string{long-JAIR  = "Journal of Artificial Intelligence Research (JAIR)"}
 @string{long-ML    = "Machine Learning Journal (ML)"}
@@ -80,6 +81,7 @@ long-
 @string{COLING = "COLING"}
 @string{COLINGACL = "COLING/ACL"}
 @string{CIKM = "CIKM"}
+@string{COLM = "COLM"}
 @string{SIGIR = "SIGIR"}
 @string{IJCAI = "IJCAI"}
 @string{ICASSP= "ICASSP"}
@@ -111,38 +113,78 @@ long-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Publications 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@inproceedings{espinosa2025scaling,
+  title={Scaling Offline RL via Efficient and Expressive Shortcut Models},
+  author={Espinosa-Dice, Nicolas and Zhang, Yiyi and Chen, Yiding and Guo, Bradley and Oertell, Owen and Swamy, Gokul and Brantley, Kiante and Sun, Wen},
+  booktitle=PREPRINT,
+  shorttitle=PREPRINT,
+  year={2025},
+  abstract={Diffusion and flow models have emerged as powerful generative approaches capable of modeling diverse and multimodal behavior. However, applying these models to offline reinforcement learning (RL) remains challenging due to the iterative nature of their noise sampling processes, making policy optimization difficult. In this paper, we introduce Scalable Offline Reinforcement Learning (SORL), a new offline RL algorithm that leverages shortcut models - a novel class of generative models - to scale both training and inference. SORL's policy can capture complex data distributions and can be trained simply and efficiently in a one-stage training procedure. At test time, SORL introduces both sequential and parallel inference scaling by using the learned Q-function as a verifier. We demonstrate that SORL achieves strong performance across a range of offline RL tasks and exhibits positive scaling behavior with increased test-time compute.},
+  url={https://arxiv.org/pdf/2505.22866},
+  keywords={preprint, recent}
+}
+
+@inproceedings{brantley2025accelerating,
+  title={Accelerating RL for LLM Reasoning with Optimal Advantage Regression},
+  author={Brantley, Kiant{\'e} and Chen, Mingyu and Gao, Zhaolin and Lee, Jason D and Sun, Wen and Zhan, Wenhao and Zhang, Xuezhou},
+  booktitle=PREPRINT,
+  shorttitle=PREPRINT,
+  year={2025},
+  abstract={Reinforcement learning (RL) has emerged as a powerful tool for fine-tuning large language models (LLMs) to improve complex reasoning abilities. However, state-of-the-art policy optimization methods often suffer from high computational overhead and memory consumption, primarily due to the need for multiple generations per prompt and the reliance on critic networks or advantage estimates of the current policy. In this paper, we propose  A*-PO, a novel two-stage policy optimization framework that directly approximates the optimal advantage function and enables efficient training of LLMs for reasoning tasks. In the first stage, we leverage offline sampling from a reference policy to estimate the optimal value function  V *, eliminating the need for costly online value estimation. In the second stage, we perform on-policy updates using a simple least-squares regression loss with only a single generation per prompt. Theoretically, we establish performance guarantees and prove that the KL-regularized RL objective can be optimized without requiring complex exploration strategies. Empirically,  A*-PO achieves competitive performance across a wide range of mathematical reasoning benchmarks, while reducing training time by up to 2x and peak memory usage by over 30\% compared to PPO, GRPO, and REBEL.},
+  url={https://arxiv.org/pdf/2505.20686},
+  keywords={preprint, recent}
+}
+
+@inproceedings{wang2025value,
+  title={Value-Guided Search for Efficient Chain-of-Thought Reasoning},
+  booktitle=PREPRINT,
+  shorttitle=PREPRINT,
+  year={2025},
+  author={Wang, Kaiwen and Zhou, Jin Peng and Chang, Jonathan and Gao, Zhaolin and Kallus, Nathan and Brantley, Kiant{\'e} and Sun, Wen},
+  abstract={In this paper, we propose a simple and efficient method for value model training on long-context reasoning traces. Compared to existing process reward models (PRMs), our method does not require a fine-grained notion of ``step,'' which is difficult to define for long-context reasoning models. By collecting a dataset of 2.5 million reasoning traces, we train a 1.5B token-level value model and apply it to DeepSeek models for improved performance with test-time compute scaling. We find that block-wise value-guided search (VGS) with a final weighted majority vote achieves better test-time scaling than standard methods such as majority voting or best-of-n. With an inference budget of 64 generations, VGS with DeepSeek-R1-Distill-1.5B achieves an average accuracy of 45.7\% across four competition math benchmarks (AIME 2024 & 2025, HMMT Feb 2024 & 2025), reaching parity with o3-mini-medium. Moreover, VGS significantly reduces the inference FLOPs required to achieve the same performance of majority voting.},
+  url={https://arxiv.org/pdf/2505.17373},
+  keywords={preprint, recent}
+}
+
+@inproceedings{zhou2025q,
+  title={Q#: Provably Optimal Distributional RL for LLM Post-Training},
+  booktitle=PREPRINT,
+  shorttitle=PREPRINT,
+  year={2025},
+  author={Zhou, Jin Peng and Wang, Kaiwen and Chang, Jonathan and Gao, Zhaolin and Kallus, Nathan and Weinberger, Kilian Q and Brantley, Kiant{\'e} and Sun, Wen},
+  abstract={Reinforcement learning (RL) post-training is crucial for LLM alignment and reasoning, but existing policy-based methods, such as PPO and DPO, can fall short of fixing shortcuts inherited from pre-training. In this work, we introduce Q♯, a value-based algorithm for KL-regularized RL that guides the reference policy using the optimal regularized Q function. We propose to learn the optimal Q function using distributional RL on an aggregated online dataset. Unlike prior value-based baselines that guide the model using unregularized Q-values, our method is theoretically principled and provably learns the optimal policy for the KL-regularized RL problem. Empirically, Q♯ outperforms prior baselines in math reasoning benchmarks while maintaining a smaller KL divergence to the reference policy. Theoretically, we establish a reduction from KL-regularized RL to no-regret online learning, providing the first bounds for deterministic MDPs under only realizability. Thanks to distributional RL, our bounds are also variance-dependent and converge faster when the reference policy has small variance. In sum, our results highlight Q♯ as an effective approach for post-training LLMs, offering both improved performance and theoretical guarantees. The code can be found at https://github.com/jinpz/q_sharp.},
+  url={https://arxiv.org/pdf/2502.20548},
+  keywords={preprint, recent}
+}
 
 @inproceedings{wu2024diffusing,
   title={Diffusing States and Matching Scores: A New Framework for Imitation Learning},
   author={Wu, Runzhe and Chen, Yiding and Swamy, Gokul and Brantley, Kiant{\'e} and Sun, Wen},
-  booktitle=PREPRINT,
-  shorttitle=PREPRINT,
+  booktitle=long-ICLR,
+  shorttitle=ICLR,
   year={2024},
   abstract={Adversarial Imitation Learning is traditionally framed as a two-player zero-sum game between a learner and an adversarially chosen cost function, and can therefore be thought of as the sequential generalization of a Generative Adversarial Network (GAN). A prominent example of this framework is Generative Adversarial Imitation Learning (GAIL). However, in recent years, diffusion models have emerged as a non-adversarial alternative to GANs that merely require training a score function via regression, yet produce generations of a higher quality. In response, we investigate how to lift insights from diffusion modeling to the sequential setting. We propose diffusing states and performing score-matching along diffused states to measure the discrepancy between the expert's and learner's states. Thus, our approach only requires training score functions to predict noises via standard regression, making it significantly easier and more stable to train than adversarial methods. Theoretically, we prove first- and second-order instance-dependent bounds with linear scaling in the horizon, proving that our approach avoids the compounding errors that stymie offline approaches to imitation learning. Empirically, we show our approach outperforms GAN-style imitation learning baselines across various continuous control problems, including complex tasks like controlling humanoids to walk, sit, and crawl.},
   url={https://arxiv.org/pdf/2410.13855},
-  keywords={preprint}
 }
 
 @inproceedings{monea2024llms,
   title={LLMs Are In-Context Reinforcement Learners},
   author={Monea, Giovanni and Bosselut, Antoine and Brantley, Kianté and Artzi, Yoav},
-  booktitle=PREPRINT,
-  shorttitle=PREPRINT,
+  booktitle=long-COLM,
+  shorttitle=COLM,
   year={2024},
   abstract={Large Language Models (LLMs) can learn new tasks through in-context supervised learning (i.e., ICL). This work studies if this ability extends to in-context reinforcement learning (ICRL), where models are not given gold labels in context, but only their past predictions and rewards. We show that a naive application of ICRL fails miserably, and identify the root cause as a fundamental deficiency at exploration, which leads to quick model degeneration. We propose an algorithm to address this deficiency by increasing test-time compute, as well as a compute-bound approximation. We use several challenging classification tasks to empirically show that our ICRL algorithms lead to effective learning from rewards alone, and analyze the characteristics of this ability and our methods. Overall, our results reveal remarkable ICRL abilities in LLMs.},
   url={https://arxiv.org/pdf/2410.05362},
-  keywords={preprint}
 }
 
 @inproceedings{brantley2024regressing,
   title={Regressing the Relative Future: Efficient Policy Optimization for Multi-turn RLHF},
   author={Gao, Zhaolin and Zhan, Wenhao and Chang, Jonathan D and Swamy, Gokul and Brantley, Kianté and Lee, Jason D and Sun, Wen},
-  booktitle=PREPRINT,
-  shorttitle=PREPRINT,
+  booktitle=long-ICML,
+  shorttitle=ICML,
   year={2024},
   abstract={Large Language Models (LLMs) have achieved remarkable success at tasks like summarization that involve a single turn of interaction. However, they can still struggle with multi-turn tasks like dialogue that require long-term planning. Previous works on multi-turn dialogue extend single-turn reinforcement learning from human feedback (RLHF) methods to the multi-turn setting by treating all prior dialogue turns as a long context. Such approaches suffer from covariate shift: the conversations in the training set have previous turns generated by some reference policy, which means that low training error may not necessarily correspond to good performance when the learner is actually in the conversation loop. In response, we introduce REgressing the RELative FUture (REFUEL), an efficient policy optimization approach designed to address multi-turn RLHF in LLMs. REFUEL employs a single model to estimate Q-values and trains on self-generated data, addressing the covariate shift issue. REFUEL frames the multi-turn RLHF problem as a sequence of regression tasks on iteratively collected datasets, enabling ease of implementation. Theoretically, we prove that REFUEL can match the performance of any policy covered by the training set. Empirically, we evaluate our algorithm by using Llama-3.1-70B-it to simulate a user in conversation with our model. REFUEL consistently outperforms state-of-the-art methods such as DPO and REBEL across various settings. Furthermore, despite having only 8 billion parameters, Llama-3-8B-it fine-tuned with REFUEL outperforms Llama-3.1-70B-it on long multi-turn dialogues.},  
   url={https://arxiv.org/pdf/2410.04612},
-  keywords={preprint, recent},
 }
 
 @inproceedings{brantley2024reviewer2,
@@ -171,12 +213,14 @@ long-
 @inproceedings{brantley2024rebel,
   title={REBEL: Reinforcement Learning via Regressing Relative Rewards},
   author={Gao, Zhaolin and Chang, Jonathan D and Zhan, Wenhao and Oertell, Owen and Swamy, Gokul and Brantley, Kianté and Joachims, Thorsten and Bagnell, J Andrew and Lee, Jason D and Sun, Wen},
-  booktitle=PREPRINT,
-  shorttitle=PREPRINT,
+  booktitle=long-NEURIPS,
+  shorttitle=NEURIPS,
   year={2024},
   abstract={While originally developed for continuous control problems, Proximal Policy Optimization (PPO) has emerged as the work-horse of a variety of reinforcement learning (RL) applications including the fine-tuning of generative models. Unfortunately, PPO requires multiple heuristics to enable stable convergence (e.g. value networks, clipping) and is notorious for its sensitivity to the precise implementation of these components. In response, we take a step back and ask what a minimalist RL algorithm for the era of generative models would look like. We propose REBEL, an algorithm that cleanly reduces the problem of policy optimization to regressing the relative rewards via a direct policy parameterization between two completions to a prompt, enabling strikingly lightweight implementation. In theory, we prove that fundamental RL algorithms like Natural Policy Gradient can be seen as variants of REBEL, which allows us to match the strongest known theoretical guarantees in terms of convergence and sample complexity in the RL literature. REBEL can also cleanly incorporate offline data and handle the intransitive preferences we frequently see in practice. Empirically, we find that REBEL provides a unified approach to language modeling and image generation with stronger or similar performance as PPO and DPO, all while being simpler to implement and more computationally tractable than PPO.},
   url={https://arxiv.org/abs/2404.16767},
-  keywords={recent, representative}
+  pages={52354--52400},
+  year={2024},
+  keywords={representative}
 }
 
 @inproceedings{brantley2024surprising,
@@ -198,7 +242,7 @@ long-
   year={2024},
   abstract={Reinforcement Learning (RL) from Human Preference-based feedback is a popular paradigm for fine-tuning generative models, which has produced impressive models such as GPT-4 and Claude3 Opus. This framework often consists of two steps: learning a reward model from an offline preference dataset followed by running online RL to optimize the learned reward model. In this work, leveraging the idea of reset, we propose a new RLHF algorithm with provable guarantees. Motivated by the fact that offline preference dataset provides informative states (i.e., data that is preferred by the labelers), our new algorithm, Dataset Reset Policy Optimization (DR-PO), integrates the existing offline preference dataset into the online policy training procedure via dataset reset: it directly resets the policy optimizer to the states in the offline dataset, instead of always starting from the initial state distribution. In theory, we show that DR-PO learns to perform at least as good as any policy that is covered by the offline dataset under general function approximation with finite sample complexity. In experiments, we demonstrate that on both the TL;DR summarization and the Anthropic Helpful Harmful (HH) dataset, the generation from DR-PO is better than that from Proximal Policy Optimization (PPO) and Direction Preference Optimization (DPO), under the metric of GPT4 win-rate. Code for this work can be found at https://github.com/Cornell-RL/drpo.}, 
   url={https://arxiv.org/abs/2404.08495},
-  keywords={preprint, recent/}
+  keywords={preprint}
 }
 
 
@@ -275,7 +319,7 @@ long-
   year={2024},
   abstract={We propose coactive learning as a model and feedback mechanism for training large language models (LLMs). The key insight is that users provide implicit feedback whenever they edit the text $\y$ proposed by an LLM. While the edited text $\ybar$ is typically not a gold-standard example for supervised training, coactive learning merely requires that the edited text $\ybar$ is an improvement over the proposed text $\y$. Note that such weak implicit preference feedback $\ybar \succ \y$ is available in many application settings on a per-user basis, thus enabling the personalization of LLMs. In this paper, we develop the theoretical basis for coactive training of non-linear models, and we derive CoRLL as the first coactive learning algorithm for LLMs. Empirical results indicate that CoRLL is effective even for weak and noisy coactive preference feedback, making it a promising algorithm for training and personalization of LLMs from feedback that is naturally collected in many use cases.},
   url={https://www.cs.cornell.edu/people/tj/publications/tucker_etal_24a.pdf},
-  keywords={recent, representative},
+  keywords={representative},
 }
 
 @inproceedings{brantley2024adversarial,
