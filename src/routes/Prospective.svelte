@@ -12,7 +12,7 @@
     </li>
 
     <li>
-        <span class="anormal-font-semibold text-black">Prospective postdoctoral researchers,</span> please email me your CV and a short summary of your research interests, and also complete
+        <span class="anormal-font-semibold text-black">Prospective postdoctoral researchers,</span> please email me your CV along with a brief overview of your research interests, and also complete
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdX811yBXNkicBBaEk_ynRoxYMumwUNZYHNUrcPofxei8IwKg/viewform?usp=sharing&ouid=104478079955166015408" class="underline decoration-slate-400 hover:decoration-slate-600">this form</a>.
     </li>
   </ul>
