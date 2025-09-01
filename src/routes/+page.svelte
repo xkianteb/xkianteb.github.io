@@ -6,7 +6,7 @@
   import TalkList from "./TalkList.svelte";
   import Contact from "./Contact.svelte";
   import Research from "./Research.svelte";
-  import ProspectiveStudents from "./ProspectiveStudents.svelte";
+  import Prospective from "./Prospective.svelte";
 
   import bibtexParse from 'bibtex-parse'
 
@@ -31,10 +31,9 @@
 </section>
 
 <section class="layout-md mb-5">
-  <h2 class="heading2">Prospective Students:</h2>
-  <ProspectiveStudents />
+  <h2 class="heading2">Prospective Lab Members:</h2>
+  <Prospective />
 </section>
-
 
 <section class="layout-md mb-5">
   <h2 class="heading2">Recent Publications:</h2>

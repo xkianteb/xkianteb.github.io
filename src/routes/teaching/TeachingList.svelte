@@ -6,11 +6,16 @@
   <div class="text-sm font-bold font-sans">Title:</div>
   <div class="text-sm font-bold font-sans">Topics:</div>
 
+  <div class="text-sm">Fall 2025</div>
+  <div class="text-sm">CS 182</div>
+  <div class="text-sm">Planning and Learning Methods in AI</div>
+  <div class="text-sm">Search, Planning, RL, ML</div>
  
   <div class="text-sm">Spring 2025</div>
   <div class="text-sm">CS 182</div>
   <div class="text-sm">Planning and Learning Methods in AI</div>
   <div class="text-sm">Search, Planning, RL, ML</div>
+
 </div>
 
 </div>

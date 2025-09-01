@@ -9,7 +9,7 @@
 />
 
 <section class="layout-md">
-  <h2 class="heading2">Group Members:</h2>
+  <h2 class="heading2">Current Students and Postdocs:</h2>
   <GroupList/>
 </section>
 
