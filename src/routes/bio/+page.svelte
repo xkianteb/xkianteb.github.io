@@ -32,4 +32,3 @@
   <h2 class="heading2">Representative Publications:</h2>
   <PublicationList data={bibArr} dataFilter={dataFilter}/>
 </section>
-

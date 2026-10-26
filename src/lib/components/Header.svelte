@@ -45,23 +45,19 @@
   </div>
   
   <div class="grid-rows-4  md:space-y-0 place-content-center">
-    <div class="">
+      <div class="">
       <h1 class="font-bold text-black text-2xl">
         <a href="/">Kiant&eacute; Brantley</a>
-          {#if pageTitle}
-            {#if pageTitle != 'Home'}
-              <span class="page-title">
-                <span class="text-neutral-400">—</span>
-                {pageTitle}
-              </span>
-            {/if}
-          {/if}
         </h1>
       </div>
-      <div class="anormal-font">(He/Him/His) </div>
+      <div class="anormal-font">(He/Him/His)</div>
+      {#if pageTitle && pageTitle !== 'Home'}
+        <div class="page-title">{pageTitle}</div>
+      {/if}
       <div class="anormal-font">
         <br> <span class="anormal-font-bold text-black">Assistant Professor 
-        <br> <a href="https://kempnerinstitute.harvard.edu" class="alink">Kempner Institute</a> and <a href="https://seas.harvard.edu" class="alink">School of Engineering and Applied Sciences (SEAS) Harvard University</a></span>
+        <br> <a href="https://kempnerinstitute.harvard.edu" class="alink">Kempner Institute</a> and <a href="https://seas.harvard.edu" class="alink">SEAS</a>,
+        <br> <a href="https://www.harvard.edu" class="alink">Harvard University</a></span>
         <br> 150 Western Av., Allston MA 02134
         <br><br> 
         <a href="mailto:kdbrantley@g.harvard.edu" class="alink">[kdbrantley@g.harvard.edu]</a>
@@ -94,22 +90,12 @@
   }
 
   .page-title {
-    @apply font-light;
-  }
-
-  @media (max-width: 480px) {
-    .page-title {
-      @apply block text-xl;
-    }
-
-    .page-title :first-child {
-      @apply hidden;
-    }
+    @apply mt-5 text-xl font-medium text-neutral-600;
   }
 
   @media (max-width: 420px) {
     nav {
-      @apply flex-col items-end space-x-0;
+      @apply flex-row flex-wrap items-center justify-center space-x-0 gap-x-4 gap-y-1;
     }
   }
 </style>

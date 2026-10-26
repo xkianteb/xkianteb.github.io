@@ -1,58 +1,44 @@
 <script>
+  import { matchesKeywordFilter, sortByYear } from "$lib/bibtex-list";
+
   export let data;
   export let dataFilter;
   export let dataOrder;
 
-  // Sort the data based on date
-  data.sort((a, b) => {
-      if (a.YEAR < b.YEAR) {
-          return 1;
-      }
-      if (a.YEAR > b.YEAR) {
-          return -1;
-      }
-      return 0;
-  });
+  function displayVenue(venue) {
+    return venue.replace(/\\&/g, "&");
+  }
 
-  function doesIncludes(keywords) {
-    //keywords not empty but dataFilter is empty
-    if (keywords && !dataFilter) {
-      return true
-    //keywords empty but dataFilter is not
-    } else if (!keywords && dataFilter){
-      return false
-    // Both keywords and dataFilter is empty
-    } else if (!keywords && !dataFilter){
-      return true
-    } else {
-      let result = keywords.match(dataFilter);
-      return result
+  function groupTalks(items) {
+    const groups = new Map();
+
+    for (const item of items) {
+      const key = [item.TITLE, item.AUTHOR, item.YEAR, item.URL].join("|");
+      const existing = groups.get(key);
+
+      if (existing) {
+        if (item.NOTE && !existing.VENUES.includes(item.NOTE)) {
+          existing.VENUES.push(item.NOTE);
+        }
+      } else {
+        groups.set(key, { ...item, VENUES: item.NOTE ? [item.NOTE] : [] });
+      }
     }
+
+    return [...groups.values()];
   }
 
-  function doOrder() {
-    let result = dataOrder == 'year';
-    return result
-  }
-
-  let currentYear = '';
-  function isCurrentYear(year) {
-    let result = currentYear === year;
-    currentYear = year;
-    return result;
-  }
+  $: visibleTalks = data.filter((item) => matchesKeywordFilter(item.KEYWORDS, dataFilter));
+  $: sortedData = sortByYear(groupTalks(visibleTalks));
 </script>
 
 <div class="grid gap-y-0 ml-4">
-  {#each data as item}
-    {#if doOrder()}
-       {#if !isCurrentYear(item.YEAR)}
-         <h2 class="heading2centered ma-2 mb-2">{item.YEAR}</h2>
-       {/if}
+  {#each sortedData as item, i}
+    {#if dataOrder === "year" && (i === 0 || item.YEAR !== sortedData[i - 1].YEAR)}
+      <h2 class="heading2centered ma-2 mb-2">{item.YEAR}</h2>
     {/if}
 
-    <!-- If statement to filter publicatios based on keywords in bibtex -->
-    {#if doesIncludes(item.KEYWORDS)}
+    {#if matchesKeywordFilter(item.KEYWORDS, dataFilter)}
       <div class="flex flex-col sm:flex-row sm:items-end">
         <div class="anormal-font-semibold text-black">
           <a
@@ -65,12 +51,13 @@
           </a>
         </div>
       </div>
-      <div class="leading-snug anormal-font">
-        {item.AUTHOR}
-      </div>
-      <div class="leading-snug anormal-font">
-        {item.NOTE}, {item.YEAR}
-      </div>
+      {#if item.VENUES.length > 1}
+        {#each item.VENUES as venue}
+          <div class="leading-snug anormal-font">{displayVenue(venue)}, {item.YEAR}</div>
+        {/each}
+      {:else}
+        <div class="leading-snug anormal-font">{displayVenue(item.VENUES[0])}, {item.YEAR}</div>
+      {/if}
 
       <div class="mb-4">
         <a href={item.URL} class="asmall-font alink">[Slides]</a>

@@ -6,5 +6,7 @@
     <li><a href="https://kempnerinstitute.harvard.edu/people/our-people/nianli-peng/" class="hover:underline alink"> Nianli Peng </a></li>
     <li><a href="https://adzc.ai/" class="hover:underline alink">Alex Cai</a></li>
     <li><a href="https://danieldritter.github.io" class="hover:underline alink">Daniel Ritter</a></li>
+    <li><a href="https://ikeuchendu.com" class="hover:underline alink">Ikechukwu Uchendu</a> (co-advised with <a href="https://vijay.seas.harvard.edu" class="hover:underline alink">Vijay Janapa Reddi</a>)</li>
+    <li><a href="https://www.philipnielsen.info" class="hover:underline alink">Philip Nielsen</a></li>
   </ul>
 </div>

@@ -1,21 +1,37 @@
-<div class="grid gap-y-1">
-
-<div class="grid grid-cols-[15%_10%_40%_45%] gap-y-4 ml-4">
-  <div class="text-sm font-bold font-sans">Semester:</div>
-  <div class="text-sm font-bold font-sans">Course:</div>
-  <div class="text-sm font-bold font-sans">Title:</div>
-  <div class="text-sm font-bold font-sans">Topics:</div>
-
-  <div class="text-sm">Fall 2025</div>
-  <div class="text-sm">CS 182</div>
-  <div class="text-sm">Planning and Learning Methods in AI</div>
-  <div class="text-sm">Search, Planning, RL, ML</div>
- 
-  <div class="text-sm">Spring 2025</div>
-  <div class="text-sm">CS 182</div>
-  <div class="text-sm">Planning and Learning Methods in AI</div>
-  <div class="text-sm">Search, Planning, RL, ML</div>
-
-</div>
-
+<div class="overflow-x-auto">
+  <table class="w-full min-w-[32rem] border-collapse text-left text-sm">
+    <thead>
+      <tr class="font-sans">
+        <th scope="col" class="w-28 py-2 pr-4 font-bold">Semester</th>
+        <th scope="col" class="w-24 py-2 pr-4 font-bold">Course</th>
+        <th scope="col" class="py-2 font-bold">Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="whitespace-nowrap py-3 pr-4">Fall 2026</td>
+        <td class="whitespace-nowrap py-3 pr-4">CS 1840</td>
+        <td class="py-3">
+          <a href="https://harvard-cs-1840.github.io/2026/" class="hover:bg-neutral-300">Introduction to Reinforcement Learning</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="whitespace-nowrap py-3 pr-4">Spring 2026</td>
+        <td class="whitespace-nowrap py-3 pr-4">CS 2824</td>
+        <td class="py-3">
+          <a href="https://harvard-cs2824-s26.github.io" class="hover:bg-neutral-300">Foundations of Reinforcement Learning</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="whitespace-nowrap py-3 pr-4">Fall 2025</td>
+        <td class="whitespace-nowrap py-3 pr-4">CS 1820</td>
+        <td class="py-3">Planning and Learning Methods in AI</td>
+      </tr>
+      <tr>
+        <td class="whitespace-nowrap py-3 pr-4">Spring 2025</td>
+        <td class="whitespace-nowrap py-3 pr-4">CS 1820</td>
+        <td class="py-3">Planning and Learning Methods in AI</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
