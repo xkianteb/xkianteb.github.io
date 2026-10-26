@@ -1,4 +1,44 @@
 
+@unpublished{brantley2026regressionIMSI,
+  author={Kianté Brantley},
+  title={Regression as Policy Optimization: Advantages In, Policies Out},
+  year={2026},
+  note={IMSI Frontiers in Online Reinforcement Learning},
+  abstract={Reinforcement learning (RL) is an essential method for training large language models (LLMs), enabling better alignment with human preferences and enhanced reasoning capabilities. Nevertheless, RL post-training remains computationally demanding due to repeated rollouts, high-variance credit assignment, and the complexities of distributed systems that can introduce policy lag. A promising direction is to view KL-regularized policy optimization as a KL-prox (mirror-descent–style) step and solve it with a simple least-squares regression loss. This regression-based perspective addresses key RL challenges and enables more efficient post-training procedures. In this talk, I will introduce a unified perspective encompassing three complementary approaches. A⋆-PO minimizes reliance on online sampling by utilizing offline value computation and optimal-advantage regression. OAPL supports scalable, fully off-policy regression, even when using stale rollouts and lagged policies in distributed settings. RDA2C offers a regularized dual-averaging approach that employs cumulative gradient information to stabilize updates and reduce variance, rather than relying on local, per-round mirror-descent steps. Although RDA2C has been primarily assessed on standard RL benchmarks rather than comprehensive LLM post-training, its focus on variance reduction and data reuse aligns closely with the stability challenges encountered in large-scale LLM alignment. Collectively, these methods provide an efficient toolkit for RL-based LLM post-training and present opportunities for further research and scalable deployment.},
+  url={/assets/pdf/2026_regression_as_policy_optimization.pdf},
+  keywords={recent, regressionaspolicyoptimization}
+}
+
+@unpublished{brantley2026regressionMASC,
+  author={Kianté Brantley},
+  title={Regression as Policy Optimization: Advantages In, Policies Out},
+  year={2026},
+  note={Mid-Atlantic Student Colloquium on AI, Language and Learning},
+  abstract={Reinforcement learning (RL) is an essential method for training large language models (LLMs), enabling better alignment with human preferences and enhanced reasoning capabilities. Nevertheless, RL post-training remains computationally demanding due to repeated rollouts, high-variance credit assignment, and the complexities of distributed systems that can introduce policy lag. A promising direction is to view KL-regularized policy optimization as a KL-prox (mirror-descent–style) step and solve it with a simple least-squares regression loss. This regression-based perspective addresses key RL challenges and enables more efficient post-training procedures. In this talk, I will introduce a unified perspective encompassing three complementary approaches. A⋆-PO minimizes reliance on online sampling by utilizing offline value computation and optimal-advantage regression. OAPL supports scalable, fully off-policy regression, even when using stale rollouts and lagged policies in distributed settings. RDA2C offers a regularized dual-averaging approach that employs cumulative gradient information to stabilize updates and reduce variance, rather than relying on local, per-round mirror-descent steps. Although RDA2C has been primarily assessed on standard RL benchmarks rather than comprehensive LLM post-training, its focus on variance reduction and data reuse aligns closely with the stability challenges encountered in large-scale LLM alignment. Collectively, these methods provide an efficient toolkit for RL-based LLM post-training and present opportunities for further research and scalable deployment.},
+  url={/assets/pdf/2026_regression_as_policy_optimization.pdf},
+  keywords={recent, regressionaspolicyoptimization}
+}
+
+@unpublished{brantley2026regressionPAI,
+  author={Kianté Brantley},
+  title={Regression as Policy Optimization: Advantages In, Policies Out},
+  year={2026},
+  note={Power \& AI Initiative Research Summit},
+  abstract={Reinforcement learning (RL) is an essential method for training large language models (LLMs), enabling better alignment with human preferences and enhanced reasoning capabilities. Nevertheless, RL post-training remains computationally demanding due to repeated rollouts, high-variance credit assignment, and the complexities of distributed systems that can introduce policy lag. A promising direction is to view KL-regularized policy optimization as a KL-prox (mirror-descent–style) step and solve it with a simple least-squares regression loss. This regression-based perspective addresses key RL challenges and enables more efficient post-training procedures. In this talk, I will introduce a unified perspective encompassing three complementary approaches. A⋆-PO minimizes reliance on online sampling by utilizing offline value computation and optimal-advantage regression. OAPL supports scalable, fully off-policy regression, even when using stale rollouts and lagged policies in distributed settings. RDA2C offers a regularized dual-averaging approach that employs cumulative gradient information to stabilize updates and reduce variance, rather than relying on local, per-round mirror-descent steps. Although RDA2C has been primarily assessed on standard RL benchmarks rather than comprehensive LLM post-training, its focus on variance reduction and data reuse aligns closely with the stability challenges encountered in large-scale LLM alignment. Collectively, these methods provide an efficient toolkit for RL-based LLM post-training and present opportunities for further research and scalable deployment.},
+  url={/assets/pdf/2026_regression_as_policy_optimization.pdf},
+  keywords={recent, regressionaspolicyoptimization}
+}
+
+@unpublished{brantley2026valueguidance,
+  author={Kianté Brantley},
+  title={Train, Reason, and Act Under Value Function Guidance},
+  year={2026},
+  note={University of Maryland, College Park},
+  abstract={Large language models (LLMs) have achieved remarkable progress, enabling them to tackle increasingly complex reasoning and decision-making tasks. A key driver of this success is reinforcement learning (RL) post-training, which aligns model behavior with human preferences. However, this improvement comes at a steep computational cost, as each chain-of-thought (CoT) generation demands substantial inference and training compute. To address this challenge, our recent work shows that value-function guidance—using learned value models as steering signals—can drive both more efficient training and more effective reasoning in LLMs. This talk presents three complementary methods built around this principle. A*-PO accelerates policy optimization by precomputing optimal value estimates offline, cutting rollout and memory costs. Q\# extends this idea through distributional RL, learning a regularized optimal Q-function that improves reasoning accuracy and provides convergence guarantees under KL-regularized objectives. Finally, Value-Guided Search (VGS) applies value-based reasoning at inference time, using token-level value models to guide generation instead of relying on costly process reward models or majority voting. Together, A⋆-PO, Q♯, and VGS demonstrate how value-function guidance can unify post-training and test-time reasoning, making LLM alignment faster, more stable, and significantly more compute-efficient.},
+  url={/assets/pdf/2026_umd_train_reason_act_value_function_guidance.pdf},
+  keywords={recent, valuefunctionguidance}
+}
+
 @unpublished{brantley2025Inform,
   author={Kianté Brantley},
   title={Coactive Learning for Large Language Modes using Implicit User Feedback},
@@ -6,7 +46,7 @@
   year={2025},
   note={Informs Session: Preference Learning in Large Language Models},
   url={/assets/pdf/2025_inform_Coactive_Learning.pdf},
-  keywords={recent, coactivelearning},
+  keywords={coactivelearning},
 }
 
 @unpublished{brantley2025CCC,
@@ -16,7 +56,7 @@
   year={2025},
   note={CCC Computing Futures Symposium},
   url={/assets/pdf/2025_resets.pdf},
-  keywords={recent, thepowerofresets},
+  keywords={thepowerofresets},
 }
 
 @unpublished{brantley202Google,
@@ -26,7 +66,7 @@
   year={2025},
   note={Google},
   url={/assets/pdf/2025_resets.pdf},
-  keywords={recent, thepowerofresets},
+  keywords={thepowerofresets},
 }
 
 @unpublished{brantley2025Simon,
@@ -36,7 +76,7 @@
   year={2025},
   note={Berkeley Simons Institute: The Future of Language Models and Transformers},
   url={/assets/pdf/2025_resets.pdf},
-  keywords={recent, thepowerofresets},
+  keywords={thepowerofresets},
 }
 
 @unpublished{brantley2025NSF,

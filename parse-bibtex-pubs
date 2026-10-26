@@ -7,8 +7,6 @@
 @string{long-jour-cjs    = "Canadian Journal of Statistics (CJS)"}
 @string{long-jour-aos    = "The Annals of Statistics"}
 @string{long-jour-ss     = "Statistica Sinica"}
-long-
-@string{long-NeurIPS = "Advances in Neural Information Processing Systems (NeurIPS)"}
 @string{long-AIStats = "Proceedings of the Workshop on Artificial Intelligence and Statistics (AI-Stats)"}
 @string{long-ICML = "Proceedings of the International Conference on Machine Learning (ICML)"}
 @string{long-ECML = "Proceedings of the European Conference on Machine Learning (ECML)"}
@@ -36,7 +34,6 @@ long-
 @string{long-AMTA  = "Proceedings of the Conference of the Association for Machine Translation in the Americas (AMTA)"}
 @string{long-KDD   = "Conference on Knowledge Discovery and Data Mining (KDD)"}
 @string{long-CHI   = "Proceedings of the {SIGCHI} Conference on Human Factors in Computing Systems (CHI)"}
-long-e
 @string{long-JMLR  = "Journal of Machine Learning Research (JMLR)"}
 @string{long-JAIR  = "Journal of Artificial Intelligence Research (JAIR)"}
 @string{long-ML    = "Machine Learning Journal (ML)"}
@@ -52,6 +49,12 @@ long-e
 @string{long-ICLR  = "The International Conference on Learning Representations (ICLR)"}
 @string{long-NEURIPS = "Advances in Neural Information Processing Systems (NeurIPS)"}
 @string{long-PREPRINT = "Preprint"}
+@string{long-NOTIONBLOG = "Notion Blog"}
+@string{long-AIMATHWORKSHOP = "3rd AI for Math Workshop: Toward Self-Evolving Scientific Agents"}
+@string{long-NEURIPS2023FM = "NeurIPS 2023 Workshop on Foundation Models for Decision Making"}
+@string{long-NEURIPS2023IT = "NeurIPS 2023 Workshop on Instruction Tuning and Instruction Following"}
+@string{long-WMT17 = "Proceedings of the Second Conference on Machine Translation"}
+@string{long-EXTVIS = "extvis Workshop on Intelligent User Interfaces (IUI)"}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Short Book Title
@@ -103,9 +106,13 @@ long-e
 @string{ICSLP = "ICSLP"}
 @string{IJCNLP= "IJCNLP"}
 @string{WSDM  = "WSDM"}
-@string{ICLR  = "ICLR"}
-@string{NEURIPS = "NeurIPS"}
 @string{PREPRINT = "Preprint"}
+@string{NOTIONBLOG = "Notion Blog"}
+@string{AIMATHWORKSHOP = "AI for Math Workshop"}
+@string{NEURIPS2023FM = "NeurIPS 2023 Workshop"}
+@string{NEURIPS2023IT = "NeurIPS 2023 Workshop"}
+@string{WMT17 = "WMT 2017"}
+@string{EXTVIS = "extvis (IUI)"}
 
 % Links
 % https://gist.github.com/moewew/27384a6c5f73d202653260236f375a1f
@@ -113,48 +120,161 @@ long-e
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Publications 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-@inproceedings{espinosa2025scaling,
-  title={Scaling Offline RL via Efficient and Expressive Shortcut Models},
-  author={Espinosa-Dice, Nicolas and Zhang, Yiyi and Chen, Yiding and Guo, Bradley and Oertell, Owen and Swamy, Gokul and Brantley, Kianté and Sun, Wen},
-  booktitle=PREPRINT,
+@book{agarwal2026reinforcement,
+  title={Reinforcement Learning: Theory and Algorithms},
+  author={Agarwal, Alekh and Brantley, Kiant{\'e} and Jiang, Nan and Kakade, Sham M. and Sun, Wen},
+  year={2026},
+  url={https://rltheorybook.github.io/},
+  note={Working draft},
+  keywords={book}
+}
+
+@inproceedings{oertell2025heuristics,
+  title={Heuristics considered harmful: RL with random rewards should not make LLMs reason},
+  author={Oertell, Owen and Zhan, Wenhao and Swamy, Gokul and Wu, Zhiwei Steven and Brantley, Kiant{\'e} and Lee, Jason and Sun, Wen},
+  booktitle=long-NOTIONBLOG,
+  shorttitle=NOTIONBLOG,
+  year={2025},
+  url={https://fuchsia-arch-d8e.notion.site/Heuristics-Considered-Harmful-RL-With-Random-Rewards-Should-Not-Make-LLMs-Reason-21ba29497c4180ca86ffce303f01923d},
+  abstract={Recent work has shown that for particular combinations of base model and training algorithm, reinforcement learning with random rewards (RLRR) improves the performance of LLMs on certain math reasoning benchmarks. This result is surprising as the (expected) policy gradient is exactly zero for RLRR, as all policies look the same under a random reward function. In response, we use RLRR as a diagnostic task for evaluating how well different classes of RL algorithms follow this true policy gradient. First, we demonstrate that algorithms that follow the (natural) policy gradient (e.g. RLoo (Kool et al., 2019) or REBEL (Gao et al., 2024)) produce the expected behavior of performance staying flat with random rewards, only increasing when provided with ground-truth rewards. Second, we show that rather than holding steady, heuristic policy gradients like PPO (Schulman et al., 2017) and GRPO (Shao et al., 2024) can either increase or decrease the reasoning performance of the model considerably. Third, we demonstrate than on a didactic bandit problem — a problem that has nothing to do with LLMs or reasoning — GRPO exhibits a bias towards choices that were more likely under the base policy, while the vanilla REINFORCE policy gradient (Williams, 1992) has no such tendencies. Taken together, our results underscore the importance of the choice of RL algorithm when making claims about LLM reasoning and beyond.},
+  keywords={blog}
+}
+
+@inproceedings{retchin2026peano,
+  title={Peano Player: Interactive Theorem Proving as a Constrained MDP},
+  author={Retchin, Matthew and Brantley, Kiant{\'e} and Amin, Nada},
+  booktitle=long-AIMATHWORKSHOP,
+  shorttitle=AIMATHWORKSHOP,
+  year={2026},
+  abstract={Reinforcement learning with verifiable rewards is frequently used for neural theorem proving and typically trains on a single binary signal indicating whether a complete generated proof verifies. However, proof assistants are interactive systems: after each tactic, they return an updated proof state and report whether the tactic failed. Prior methods that use tactic-failure signals treat failure as a minor penalty and allow generation to continue after a tactic fails. We introduce Peano Player, a tactic-level theorem prover formulated as a constrained Markov decision process, where the agent observes the verifier-produced proof state, receives reward for closing proofs, and incurs a terminal cost of equal magnitude for failing a tactic. We evaluate in a controlled equational-theory environment over the Peano numbers that generates unlimited provable theorems at controlled difficulty. An ablation over proof-state observation and tactic-failure cost shows that each improves solve rate independently, and their combination more than quadruples overall solve rate relative to the strongest baseline, with a tenfold difference at the greatest difficulty level. These results suggest that theorem-proving agents would benefit from learning from errors during interaction---not only from whether a completed proof verifies---because any tactic-level proof assistant exposes the same per-step signals.},
+  url={https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8S5AOggAAAAJ&sortby=pubdate&citation_for_view=8S5AOggAAAAJ:fQNAKQ3IYiAC},
+  keywords={workshop}
+}
+
+@article{fan2026scaling,
+  title={Next-token Preference: Scaling Unsupervised Reward Modeling},
+  author={Fan, Jingxuan and Li, Yueying and Qi, Zhenting and Zhang, Dinghuai and Brantley, Kiant{\'e} and Kakade, Sham M and Zhang, Hanlin},
+  booktitle=long-PREPRINT,
   shorttitle=PREPRINT,
+  journal={arXiv preprint arXiv:2603.02225},
+  year={2026},
+  abstract={Learning from feedback advances the capabilities and safety of frontier models, but preference supervision remains costly and difficult to scale. We introduce next-token preference (NTP), an unsupervised reward-modeling method that constructs preference pairs from the continuation structure of raw web text. NTP uses each prefix's original continuation as the chosen response and nearby continuations as in-batch negatives, without candidate generation or human or model-generated preference annotations. Training on 11M tokens of math-focused web data yields steady gains on RewardBench and RewardBench 2, with gains across model families and sizes. Across mathematical and general-domain web corpora, our method improves overall RewardBench 2 accuracy by 7.6--8.3 percentage points over initialization under the same token budget. Training on math-focused text yields gains of up to +16.1 on in-domain math subsets and consistent improvements on out-of-domain safety and general subsets. These reward models improve best-of-N selection on math, code, safety, and instruction following, and support math policy optimization competitive with supervised reward models of similar size. NTP also improves the label efficiency of subsequent supervised fine-tuning. Using half the labeled pairs from a curated preference dataset, NTP initialization surpasses base initialization trained on the full dataset. These results suggest that web text contains transferable preference signals that can reduce dependence on costly preference annotations.},
+  url={https://arxiv.org/abs/2603.02225},
+  keywords={preprint, recent}
+}
+
+@inproceedings{peng2026rda,
+  title={Regularized Dual Averaging Actor-Critic},
+  author={Peng, Nianli and Gordon, Geoff and Brantley, Kianté},
+  booktitle=long-PREPRINT,
+  shorttitle=PREPRINT,
+  year={2026},
+  abstract={Policy gradient methods in reinforcement learning (RL) are often viewed as stochastic gradient descent on a non-stationary objective: as the policy evolves, previously collected trajectories become off-policy, making sample-efficient data reuse a central challenge. Existing approaches typically rely on importance sampling, which can suffer high variance, or on gradient estimators tailored to differentiable (continuous) action spaces that do not directly extend to discrete control. We propose a reduction-based view of actor learning in which policy optimization is cast as fitting the cumulative advantage signal generated over time, replacing per-iteration policy-gradient steps with regularized dual-averaging updates on accumulated advantage feedback. 
+Concretely, we introduce Regularized Dual Averaging Actor-Critic (RDA2C), which maintains regularized cumulative dual variables (averaged advantage gradients) and updates the policy via a follow-the-regularized-leader style rule. This formulation enables principled reuse of past data without importance sampling and without reliance on differentiable action spaces. We show that the regret of RDA2C decomposes into two terms: a universally sublinear optimization term and an additional term that depends on the behavior of the critic learner. The latter is sublinear in simple cases (e.g., realizable linear critics) and is empirically small even with expressive function approximation. Our regret bound implies that RDA2C improves policy performance over time. Empirically, we demonstrate that RDA2C is competitive with standard baselines on high-dimensional continuous-control benchmarks while also performing well in discrete-action settings.},
+  keywords={preprint}
+}
+
+@inproceedings{ritter2026llms,
+  title={LLMs Can Learn to Reason Via Off-Policy RL},
+  author={Ritter, Daniel and Oertell, Owen and Guo, Bradley and Chang, Jonathan and Brantley, Kiant{\'e} and Sun, Wen},
+  booktitle=long-PREPRINT,
+  shorttitle=PREPRINT,
+  year={2026},
+  abstract={Reinforcement learning (RL) approaches for Large Language Models (LLMs) frequently use on-policy algorithms, such as PPO or GRPO. However, policy lag from distributed training architectures and differences between the training and inference policies break this assumption, making the data off-policy by design. To rectify this, prior work has focused on making this off-policy data appear more on-policy, either via importance sampling (IS), or by more closely aligning the training and inference policies by explicitly modifying the inference engine. In this work, we embrace off-policyness and propose a novel off-policy RL algorithm that does not require these modifications: Optimal Advantage-based Policy Optimization with Lagged Inference policy (OAPL). We show that OAPL outperforms GRPO with importance sampling on competition math benchmarks, and can match the performance of a publicly available coding model, DeepCoder, on LiveCodeBench, while using 3x fewer generations during training. We further empirically demonstrate that models trained via OAPL have improved test time scaling under the Pass@k metric. OAPL allows for efficient, effective post-training even with lags of more than 400 gradient steps between the training and inference policies, 100x more off-policy than prior approaches.},
+  url={https://arxiv.org/abs/2602.19362},
+  keywords={preprint}
+}
+
+@article{bejjani2025emergence,
+  title={The Emergence of Complex Behavior in Large-Scale Ecological Environments},
+  author={Bejjani, Joseph and Van Amburg, Chase and Wang, Chengrui and Su, Chloe Huangyuan and Pratt, Sarah M and Mazloumi, Yasin and Khoshnevis, Naeem and Kakade, Sham M and Brantley, Kiant{\'e} and Walsman, Aaron},
+  booktitle=long-PREPRINT,
+  shorttitle=PREPRINT,
+  journal={arXiv preprint arXiv:2510.18221},
+  year={2025},
+  abstract={We explore how physical scale and population size shape the emergence of complex behaviors in open-ended ecological environments. In our setting, agents are unsupervised and have no explicit rewards or learning objectives but instead evolve over time according to reproduction, mutation, and selection. As they act, agents also shape their environment and the population around them in an ongoing dynamic ecology. Our goal is not to optimize a single high-performance policy, but instead to examine how behaviors emerge and evolve across large populations due to natural competition and environmental pressures. We use modern hardware along with a new multi-agent simulator to scale the environment and population to sizes much larger than previously attempted, reaching populations of over 60,000 agents, each with their own evolved neural network policy. We identify various emergent behaviors such as long-range resource extraction, vision-based foraging, and predation that arise under competitive and survival pressures. We examine how sensing modalities and environmental scale affect the emergence of these behaviors and find that some of them appear only in sufficiently large environments and populations, and that larger scales increase the stability and consistency of these emergent behaviors. While there is a rich history of research in evolutionary settings, our scaling results on modern hardware provide promising new directions to explore ecology as an instrument of machine learning in an era of increasingly abundant computational resources and efficient machine frameworks. },
+  url={https://arxiv.org/abs/2510.18221},
+  keywords={preprint}
+}
+
+@article{monea2025breadcrumbs,
+  title={Breadcrumbs Reasoning: Memory-Efficient Reasoning with Compression Beacons},
+  author={Monea, Giovanni and Feldman, Yair and Padmanabhan, Shankar and Brantley, Kiant{\'e} and Artzi, Yoav},
+  booktitle=long-PREPRINT,
+  shorttitle=PREPRINT,
+  journal={arXiv preprint arXiv:2510.13797},
+  year={2025},
+  abstract={The scalability of large language models for long-context reasoning is severely constrained by the linear growth of their Transformer key-value cache, which incurs significant memory and computational costs. We posit that as a model generates reasoning tokens, the informational value of past generated tokens diminishes, creating an opportunity for compression. In this work, we propose to periodically compress the generation KV cache with a learned, special-purpose token and evict compressed entries. We train the model to perform this compression via a modified joint distillation and reinforcement learning (RL) framework. Our training method minimizes overhead over the conventional RL process, as it leverages RL outputs for distillation. Empirically, our method achieves a superior memory-accuracy Pareto frontier compared to both the model without cache compression and training-free compression techniques.},
+  url={https://arxiv.org/abs/2510.13797},
+  keywords={preprint}
+}
+
+@article{espinosa2025expressive,
+  title={Expressive Value Learning for Scalable Offline Reinforcement Learning},
+  author={Espinosa-Dice, Nicolas and Brantley, Kiant{\'e} and Sun, Wen},
+  booktitle=long-PREPRINT,
+  shorttitle=PREPRINT,
+  year={2025},
+  abstract={Reinforcement learning (RL) is a powerful paradigm for learning to make sequences of decisions. However, RL has yet to be fully leveraged in robotics, principally due to its lack of scalability. Offline RL offers a promising avenue by training agents on  large, diverse datasets, avoiding the costly real-world interactions of online RL. Scaling offline RL to increasingly complex datasets requires expressive generative models such as diffusion and flow matching. However, existing methods typically depend on either backpropagation through time (BPTT), which is computationally prohibitive, or policy distillation, which introduces compounding errors and limits scalability to larger base policies. In this paper, we consider the question of how to develop a scalable offline RL approach without relying on distillation or backpropagation through time. We introduce Expressive Value Learning for Offline Reinforcement Learning (EVOR): a scalable offline RL approach that integrates both expressive policies and expressive value functions. EVOR learns an optimal, regularized $Q$-function via flow matching during training. At inference-time, EVOR performs inference-time policy extraction via rejection sampling against the expressive value function, enabling efficient optimization, regularization, and compute-scalable search without retraining. Empirically, we show that EVOR outperforms baselines on a diverse set of offline RL tasks, demonstrating the benefit of integrating expressive value learning into offline RL.},
+  url={https://arxiv.org/abs/2510.08218},
+  keywords={preprint}
+  }
+
+@inproceedings{espinosa2026scaling,
+  title={Scaling offline rl via efficient and expressive shortcut models},
+  author={Espinosa-Dice, Nicolas and Zhang, Yiyi and Chen, Yiding and Guo, Bradley and Oertell, Owen and Swamy, Gokul and Brantley, Kianté and Sun, Wen},
+  booktitle=long-NEURIPS,
+  shorttitle=NEURIPS,
+  volume={38},
   year={2025},
   abstract={Diffusion and flow models have emerged as powerful generative approaches capable of modeling diverse and multimodal behavior. However, applying these models to offline reinforcement learning (RL) remains challenging due to the iterative nature of their noise sampling processes, making policy optimization difficult. In this paper, we introduce Scalable Offline Reinforcement Learning (SORL), a new offline RL algorithm that leverages shortcut models - a novel class of generative models - to scale both training and inference. SORL's policy can capture complex data distributions and can be trained simply and efficiently in a one-stage training procedure. At test time, SORL introduces both sequential and parallel inference scaling by using the learned Q-function as a verifier. We demonstrate that SORL achieves strong performance across a range of offline RL tasks and exhibits positive scaling behavior with increased test-time compute.},
-  url={https://arxiv.org/pdf/2505.22866},
-  keywords={preprint, recent}
+  url={https://papers.nips.cc/paper_files/paper/2025/hash/03715f9a330c916da8144d1f8dad4554-Abstract-Conference.html},
 }
 
-@inproceedings{brantley2025accelerating,
-  title={Accelerating RL for LLM Reasoning with Optimal Advantage Regression},
-  author={Brantley, Kianté and Chen, Mingyu and Gao, Zhaolin and Lee, Jason D and Sun, Wen and Zhan, Wenhao and Zhang, Xuezhou},
-  booktitle=PREPRINT,
-  shorttitle=PREPRINT,
+@inproceedings{brantley2026accelerating,
+  title={Accelerating rl for llm reasoning with optimal advantage regression},
+  author={Brantley, Kianté and Chen, Mingyu and Gao, Zhaolin and Lee, Jason and Sun, Wen and Zhan, Wenhao and Zhang, Xuezhou},
+  booktitle=long-NEURIPS,
+  shorttitle=NEURIPS,
+  volume={38},
   year={2025},
   abstract={Reinforcement learning (RL) has emerged as a powerful tool for fine-tuning large language models (LLMs) to improve complex reasoning abilities. However, state-of-the-art policy optimization methods often suffer from high computational overhead and memory consumption, primarily due to the need for multiple generations per prompt and the reliance on critic networks or advantage estimates of the current policy. In this paper, we propose  A*-PO, a novel two-stage policy optimization framework that directly approximates the optimal advantage function and enables efficient training of LLMs for reasoning tasks. In the first stage, we leverage offline sampling from a reference policy to estimate the optimal value function  V *, eliminating the need for costly online value estimation. In the second stage, we perform on-policy updates using a simple least-squares regression loss with only a single generation per prompt. Theoretically, we establish performance guarantees and prove that the KL-regularized RL objective can be optimized without requiring complex exploration strategies. Empirically,  A*-PO achieves competitive performance across a wide range of mathematical reasoning benchmarks, while reducing training time by up to 2x and peak memory usage by over 30\% compared to PPO, GRPO, and REBEL.},
-  url={https://arxiv.org/pdf/2505.20686},
-  keywords={preprint, recent}
+  url={https://proceedings.neurips.cc/paper_files/paper/2025/hash/de8e1aebdb1e8a96970a58a641eac3cc-Abstract-Conference.html},
+  keywords={recent}
 }
 
-@inproceedings{wang2025value,
-  title={Value-Guided Search for Efficient Chain-of-Thought Reasoning},
-  booktitle=PREPRINT,
+@article{gao2026p1,
+  title={p1: Better Prompt Optimization with Fewer Prompts},
+  author={Gao, Zhaolin and Wang, Yu (Sid) and Liu, Bo and Joachims, Thorsten and Brantley, Kianté and Sun, Wen},
+  booktitle=long-PREPRINT,
   shorttitle=PREPRINT,
+  journal={arXiv preprint arXiv:2604.08801},
+  year={2026},
+  abstract={Prompt optimization improves language models without updating their weights by searching for a better system prompt, but its effectiveness varies widely across tasks. We study what makes a task amenable to prompt optimization. We show that the reward variance across different system prompts can be decomposed into two components: variance among responses, which captures generation stochasticity, and variance among system prompts, which captures differences in system prompt quality. Prompt optimization succeeds when variance among system prompts is sufficiently large, but fails when variance among responses dominates the variance of the system prompts. Surprisingly, we further show that scaling to more user prompts can hurt optimization by reducing variance among system prompts, especially on heterogeneous datasets where different user prompts favor different system prompts. Motivated by this insight, we propose p1, a simple user prompt filtering method that selects a small subset of user prompts with high variance across candidate system prompts. This subset of user prompts allows one to distinguish a good system prompt from a bad one, making system optimization easier. Experiments on reasoning benchmarks show that p1 substantially improves prompt optimization over training on the full dataset and outperforms strong baselines such as GEPA. Notably, training on only two prompts from AIME 24 yields a system prompt that generalizes well to other reasoning benchmarks.},
+  url={https://arxiv.org/abs/2604.08801},
+  keywords={preprint},
+}
+
+@inproceedings{wang2026value,
+  title={Value-guided search for efficient chain-of-thought reasoning},
+  booktitle=long-NEURIPS,
+  shorttitle=NEURIPS,
+  volume={38},
   year={2025},
-  author={Wang, Kaiwen and Zhou, Jin Peng and Chang, Jonathan and Gao, Zhaolin and Kallus, Nathan and Brantley, Kianté and Sun, Wen},
+  author={Wang, Kaiwen and Zhou, Jin and Chang, Jonathan and Gao, Zhaolin and Kallus, Nathan and Brantley, Kianté and Sun, Wen},
   abstract={In this paper, we propose a simple and efficient method for value model training on long-context reasoning traces. Compared to existing process reward models (PRMs), our method does not require a fine-grained notion of ``step,'' which is difficult to define for long-context reasoning models. By collecting a dataset of 2.5 million reasoning traces, we train a 1.5B token-level value model and apply it to DeepSeek models for improved performance with test-time compute scaling. We find that block-wise value-guided search (VGS) with a final weighted majority vote achieves better test-time scaling than standard methods such as majority voting or best-of-n. With an inference budget of 64 generations, VGS with DeepSeek-R1-Distill-1.5B achieves an average accuracy of 45.7\% across four competition math benchmarks (AIME 2024 & 2025, HMMT Feb 2024 & 2025), reaching parity with o3-mini-medium. Moreover, VGS significantly reduces the inference FLOPs required to achieve the same performance of majority voting.},
-  url={https://arxiv.org/pdf/2505.17373},
-  keywords={preprint, recent}
+  url={https://proceedings.neurips.cc/paper_files/paper/2025/hash/7a8a3a34ede2bae1fd2fb1876a7ba362-Abstract-Conference.html},
+  keywords={recent}
 }
 
 @inproceedings{zhou2025q,
-  title={Q#: Provably Optimal Distributional RL for LLM Post-Training},
-  booktitle=PREPRINT,
-  shorttitle=PREPRINT,
+  title={Q\#: Provably Optimal Distributional RL for LLM Post-Training},
+  booktitle=long-NEURIPS,
+  shorttitle=NEURIPS,
   year={2025},
   author={Zhou, Jin Peng and Wang, Kaiwen and Chang, Jonathan and Gao, Zhaolin and Kallus, Nathan and Weinberger, Kilian Q and Brantley, Kianté and Sun, Wen},
   abstract={Reinforcement learning (RL) post-training is crucial for LLM alignment and reasoning, but existing policy-based methods, such as PPO and DPO, can fall short of fixing shortcuts inherited from pre-training. In this work, we introduce Q♯, a value-based algorithm for KL-regularized RL that guides the reference policy using the optimal regularized Q function. We propose to learn the optimal Q function using distributional RL on an aggregated online dataset. Unlike prior value-based baselines that guide the model using unregularized Q-values, our method is theoretically principled and provably learns the optimal policy for the KL-regularized RL problem. Empirically, Q♯ outperforms prior baselines in math reasoning benchmarks while maintaining a smaller KL divergence to the reference policy. Theoretically, we establish a reduction from KL-regularized RL to no-regret online learning, providing the first bounds for deterministic MDPs under only realizability. Thanks to distributional RL, our bounds are also variance-dependent and converge faster when the reference policy has small variance. In sum, our results highlight Q♯ as an effective approach for post-training LLMs, offering both improved performance and theoretical guarantees. The code can be found at https://github.com/jinpz/q_sharp.},
   url={https://arxiv.org/pdf/2502.20548},
-  keywords={preprint, recent}
 }
 
 @inproceedings{wu2024diffusing,
@@ -190,7 +310,7 @@ long-e
 @inproceedings{brantley2024reviewer2,
   title={Reviewer2: Optimizing Review Generation Through Prompt Generation},
   author={Gao, Zhaolin and Brantley, Kianté and Joachims, Thorsten},
-  booktitle=PREPRINT,
+  booktitle=long-PREPRINT,
   shorttitle=PREPRINT,
   year={2024},
   abstract={Recent developments in LLMs offer new opportunities for assisting authors in improving their work. In this paper, we envision a use case where authors can receive LLM-generated reviews that uncover weak points in the current draft. While initial methods for automated review generation already exist, these methods tend to produce reviews that lack detail, and they do not cover the range of opinions that human reviewers produce. To address this shortcoming, we propose an efficient two-stage review generation framework called Reviewer2. Unlike prior work, this approach explicitly models the distribution of possible aspects that the review may address. We show that this leads to more detailed reviews that better cover the range of aspects that human reviewers identify in the draft. As part of the research, we generate a large-scale review dataset of 27k papers and 99k reviews that we annotate with aspect prompts, which we make available as a resource for future research.},
@@ -226,7 +346,7 @@ long-e
 @inproceedings{brantley2024surprising,
   title={A Surprising Failure? Multimodal LLMs and the NLVR Challenge},
   author={Wu, Anne and Brantley, Kianté and Artzi, Yoav},
-  booktitle=PREPRINT,
+  booktitle=long-PREPRINT,
   shorttitle=PREPRINT,
   year={2024},
   abstract={This study evaluates three state-of-the-art MLLMs -- GPT-4V, Gemini Pro, and the open-source model IDEFICS -- on the compositional natural language vision reasoning task NLVR. Given a human-written sentence paired with a synthetic image, this task requires the model to determine the truth value of the sentence with respect to the image. Despite the strong performance demonstrated by these models, we observe they perform poorly on NLVR, which was constructed to require compositional and spatial reasoning, and to be robust for semantic and systematic biases.},
@@ -237,7 +357,7 @@ long-e
 @inproceedings{brantley2024dataset,
   title={Dataset Reset Policy Optimization for RLHF},
   author={Chang, Jonathan D and Shan, Wenhao and Oertell, Owen and Brantley, Kianté and Misra, Dipendra and Lee, Jason D and Sun, Wen},
-  booktitle=PREPRINT,
+  booktitle=long-PREPRINT,
   shorttitle=PREPRINT,
   year={2024},
   abstract={Reinforcement Learning (RL) from Human Preference-based feedback is a popular paradigm for fine-tuning generative models, which has produced impressive models such as GPT-4 and Claude3 Opus. This framework often consists of two steps: learning a reward model from an offline preference dataset followed by running online RL to optimize the learned reward model. In this work, leveraging the idea of reset, we propose a new RLHF algorithm with provable guarantees. Motivated by the fact that offline preference dataset provides informative states (i.e., data that is preferred by the labelers), our new algorithm, Dataset Reset Policy Optimization (DR-PO), integrates the existing offline preference dataset into the online policy training procedure via dataset reset: it directly resets the policy optimizer to the states in the offline dataset, instead of always starting from the initial state distribution. In theory, we show that DR-PO learns to perform at least as good as any policy that is covered by the offline dataset under general function approximation with finite sample complexity. In experiments, we demonstrate that on both the TL;DR summarization and the Anthropic Helpful Harmful (HH) dataset, the generation from DR-PO is better than that from Proximal Policy Optimization (PPO) and Direction Preference Optimization (DPO), under the metric of GPT4 win-rate. Code for this work can be found at https://github.com/Cornell-RL/drpo.}, 
@@ -264,6 +384,7 @@ long-e
   year={2021},
   school={University of Maryland, College Park},
   url={https://www.proquest.com/openview/7d9dc57392258849ca14e0bdcc6d66e2/1?pq-origsite=gscholar&cbl=18750&diss=y},
+  keywords={thesis},
 }
 
 @mastersthesis{brantley2016bcap,
@@ -273,6 +394,7 @@ long-e
   year={2016},
   school={University of Maryland, Baltimore County},
   url={https://www.proquest.com/openview/aca94379da7bcfe9975298f08d9df648/1?pq-origsite=gscholar&cbl=18750},
+  keywords={thesis},
   note={}
 }
 
@@ -322,11 +444,13 @@ long-e
   keywords={representative},
 }
 
-@inproceedings{brantley2024adversarial,
-  title={Adversarial Imitation Learning via Boosting},
-  author={Chang, Jonathan Daniel and Sreenivas, Dhruv and Huang, Yingbing and Brantley, Kianté and Sun, Wen},
+@inproceedings{chang2024adversarial,
+  title={Adversarial imitation learning via boosting},
+  author={Chang, Jonathan and Sreenivas, Dhruv and Huang, Yingbing and Brantley, Kiant{\'e} and Sun, Wen},
   booktitle=long-ICLR,
   shorttitle=ICLR,
+  volume={2024},
+  pages={14101--14119},
   year={2024},
   abstract={Adversarial imitation learning (AIL) has stood out as a dominant framework across various imitation learning (IL) applications, with Discriminator Actor Critic (DAC) demonstrating the effectiveness of off-policy learning algorithms in improving sample efficiency and scalability to higher-dimensional observations. Despite DAC’s empirical success, the original AIL objective is on-policy and DAC’s ad-hoc application of off-policy training does not guarantee successful imitation. Follow-up work such as ValueDICE tackles this issue by deriving a fully off-policy AIL objective. Instead in this work, we develop a novel and principled AIL algorithm via the framework of boosting. Like boosting, our new algorithm, AILBoost, maintains an ensemble of weighted weak learners (i.e., policies) and trains a discriminator that witnesses the maximum discrepancy between the distributions of the ensemble and the expert policy. We maintain a weighted replay buffer to represent the state-action distribution induced by the ensemble, allowing us to train discriminators using the entire data collected so far. Empirically, we evaluate our algorithm on both controller state-based and pixel-based environments from the DeepMind Control Suite. AILBoost outperforms DAC on both types of environments, demonstrating the benefit of properly weighting replay buffer data for off-policy training. On state-based environments, AILBoost outperforms ValueDICE and IQ-Learn, achieving state-of-the-art performance with as little as one expert trajectory.},
   url={https://arxiv.org/abs/2404.08513},
@@ -335,8 +459,8 @@ long-e
 @inproceedings{brantley2023policy,
   title={Policy-Gradient Training of Language Models for Ranking},
   author={Gao, Ge and Chang, Jonathan Daniel and Cardie, Claire and Brantley, Kianté and Joachims, Thorsten},
-  booktitle={NeurIPS 2023 Workshop Foundation Models for Decision Making Workshop},
-  shorttitle={NeurIPS 2023 Workshop Foundation Models for Decision Making Workshop},
+  booktitle=long-NEURIPS2023FM,
+  shorttitle=NEURIPS2023FM,
   year={2023},
   abstract={Text retrieval plays a crucial role in incorporating factual knowledge for decision making into language processing pipelines, ranging from chat-based web search to question answering systems. Current state-of-the-art text retrieval models leverage pre-trained large language models (LLMs) to achieve competitive performance, but training LLM-based retrievers via typical contrastive losses requires intricate heuristics, including selecting hard negatives and using additional supervision as learning signals. This reliance on heuristics stems from the fact that the contrastive loss itself is heuristic and does not directly optimize the downstream metrics of decision quality at the end of the processing pipeline. To address this issue, we introduce Neural PG-RANK, a novel training algorithm that learns to rank by instantiating a LLM as a Plackett-Luce ranking policy. Neural PG-RANK provides a principled method for end-to-end training of retrieval models as part of larger decision systems via policy gradient, with little reliance on complex heuristics, and it effectively unifies the training objective with downstream decision-making quality. We conduct extensive experiments on various text retrieval benchmarks. The results demonstrate that when the training objective aligns with the evaluation setup, Neural PG-RANK yields remarkable in-domain performance improvement, with substantial out-of-domain generalization to some critical datasets employed in downstream question answering tasks.},
   url={https://arxiv.org/abs/2310.04407},
@@ -346,12 +470,12 @@ long-e
 @inproceedings{brantley2023learning,
   title={Learning to Generate Better Than Your LLM},
   author={Chang, Jonathan and Brantley, Kianté and Ramamurthy, Rajkumar, and Misra, Dipendra, and Sun, Wen},
-  booktitle={NeurIPS 2023 Workshop on Instruction Tuning and Instruction Following},
-  shorttitle={NeurIPS 2023 Workshop on Instruction Tuning and Instruction Following},
+  booktitle=long-NEURIPS2023IT,
+  shorttitle=NEURIPS2023IT,
   year={2023},
   abstract={Reinforcement learning (RL) has emerged as a powerful paradigm for fine-tuning Large Language Models (LLMs) for text generation. In particular, recent LLMs such as ChatGPT and GPT4 can engage in fluent conversations with users after finetuning with RL. Capitalizing on key properties of text generation, we seek to investigate RL algorithms beyond general purpose algorithms like Proximal Policy Optimization (PPO). In particular, we extend RL algorithms to allow them to interact with a dynamic black-box guide LLM and propose RL with guided feedback (RLGF), a suite of RL algorithms for LLM fine-tuning. We provide two ways for the guide LLM to interact with the LLM to be optimized for maximizing rewards. The guide LLM can generate text which serves as additional starting states for the RL optimization procedure. The guide LLM can also be used to complete the partial sentences generated by the LLM that is being optimized, treating the guide LLM as an expert to imitate and surpass eventually. We experiment on the IMDB positive sentiment, CommonGen, and TL;DR summarization tasks. We show that our RL algorithms achieve higher performance than supervised learning (SL) and the RL baseline PPO, demonstrating the benefit of interaction with the guide LLM. On both CommonGen and TL;DR, we not only outperform our SL baselines but also improve upon PPO across a variety of metrics beyond the one we optimized for. Our code can be found at https://github.com/Cornell-RL/tril.},
   url={https://arxiv.org/abs/2306.11816},
-  keywords={workshop, representative},
+  keywords={workshop},
 }
 
 @inproceedings{brantley2023lilgym,
@@ -439,8 +563,8 @@ long-e
 @inproceedings{brantley2017umd,
   title={The UMD Neural Machine Translation Systems at WMT17 Bandit Learning Task},
   author={Sharaf, Amr and Feng, Shi and Nguyen, Khanh and Brantley, Kianté and Daumé III, Hal},
-  booktitle={Proceedings of the Second Conference on Machine Translation},
-  shorttitle={Proceedings of the Second Conference on Machine Translation},
+  booktitle=long-WMT17,
+  shorttitle=WMT17,
   pages={667--673},
   year={2017},
   abstract={We describe the University of Maryland machine translation systems submitted to the WMT17 German-English Bandit Learning Task. The task is to adapt a translation system to a new domain, using only bandit feedback: the system receives a German sentence to translate, produces an English sentence, and only gets a scalar score as feedback. Targeting these two challenges (adaptation and bandit learning), we built a standard neural machine translation system and extended it in two ways: (1) robust reinforcement learning techniques to learn effectively from the bandit feedback, and (2) domain adaptation using data selection from a large corpus of parallel data.},
@@ -451,11 +575,58 @@ long-e
 @inproceedings{brantley2015ldaexplore,
   title={Ldaexplore: Visualizing topic models generated using latent dirichlet allocation},
   author={Ganesan, Ashwinkumar and Brantley, Kianté and Pan, Shimei and Chen, Jian},
-  booktitle={extvis Workshop - Intelligent User Interfaces (IUI)},
-  shorttitle={extvis Workshop - Intelligent User Interfaces (IUI)},
+  booktitle=long-EXTVIS,
+  shorttitle=EXTVIS,
   year={2015},
   abstract={We present LDAExplore, a tool to visualize topic distributions in a given document corpus that are generated using Topic Modeling methods. Latent Dirichlet Allocation (LDA) is one of the basic methods that is predominantly used to generate topics. One of the problems with methods like LDA is that users who apply them may not understand the topics that are generated. Also, users may find it difficult to search correlated topics and correlated documents. LDAExplore, tries to alleviate these problems by visualizing topic and word distributions generated from the document corpus and allowing the user to interact with them. The system is designed for users, who have minimal knowledge of LDA or Topic Modelling methods. To evaluate our design, we run a pilot study which uses the abstracts of 322 Information Visualization papers, where every abstract is considered a document. The topics generated are then explored by users. The results show that users are able to find correlated documents and group them based on topics that are similar.},
   url={https://arxiv.org/abs/1507.06593},
   keywords={workshop},
 }
 
+@article{monea2026state,
+  title={The State-Prediction Separation Hypothesis},
+  author={Monea, Giovanni and Godey, Nathan and Brantley, Kianté and Artzi, Yoav},
+  booktitle=long-PREPRINT,
+  shorttitle=PREPRINT,
+  journal={arXiv preprint arXiv:2607.01218},
+  year={2026},
+  abstract={Transformers use the same forward computation stream to both predict the next token and store useful state for future token predictions. We formulate the state-prediction separation hypothesis: disentangling the two roles yields better language modeling performance. We design a Transformer variant that uses two computation streams to separate the two functions, and conduct pretraining experiments across various scales. Our experiments show that state-prediction separation consistently offers better data and compute efficiencies, improving validation loss and outperforming standard Transformers by 2--3 percentage points on average on downstream tasks. We also conduct extensive empirical analysis that rules out potential confounders and demonstrates the fundamental difference in the gradients our design entails.},
+  url={https://arxiv.org/abs/2607.01218},
+  keywords={preprint},
+}
+
+@article{peng2026policy,
+  title={Policy as Data: Replay-Based Policy Dual Averaging via Advantage Regression},
+  author={Peng, Nianli and Gordon, Geoffrey J. and Brantley, Kianté},
+  booktitle=long-PREPRINT,
+  shorttitle=PREPRINT,
+  journal={arXiv preprint arXiv:2610.04638},
+  year={2026},
+  abstract={Actor-critic methods reuse past experience to improve sample efficiency. However, historical data are typically regarded as off-policy samples for the current policy-improvement update. This work introduces Regularized Dual Averaging Actor Critic (RDA2C), which assigns a distinct role to replay. In regularized dual averaging, the subsequent policy is determined by accumulated policy-improvement feedback, so historical advantage estimates contribute directly to the actor objective rather than solely to the most recent update. RDA2C stores state-action samples with critic-estimated advantage labels, fits a dual score model to the aggregated dataset, and derives the current policy from the accumulated score model using the entropy mirror map. In this way, replay defines an empirical dual objective from which the policy is computed. To analyze RDA2C, we establish a finite-time value-gap decomposition, separating the regularized dual-averaging term from errors due to stale-replay supervised fitting, critic bias, finite-buffer variance, and replay coverage, and stating the assumptions under which each error is bounded. RDA2C accepts advantage labels from any critic. With GAE labels, RDA2C outperforms PPO on six of eight MuJoCo tasks and eight of twelve Atari games. RDA2C also outperforms AAPDA, the closest dual-averaging baseline, on six of eight MuJoCo tasks. With twin-Q labels, RDA2C matches SAC at matched batch size and update frequency.},
+  url={https://arxiv.org/abs/2610.04638},
+  keywords={preprint, recent, representative},
+}
+
+@article{li2026unsupervised,
+  title={Unsupervised Multimodal Reward Modeling},
+  author={Li, Yueying and Fan, Jingxuan and Brantley, Kianté and Kakade, Sham M. and Zhang, Hanlin},
+  booktitle=long-PREPRINT,
+  shorttitle=PREPRINT,
+  journal={arXiv preprint arXiv:2610.12707},
+  year={2026},
+  abstract={Vision-language reward models are trained on annotated preference pairs, which are expensive to collect, can disagree, and are ranked by benchmark accuracy. We build one with no human preference label: a linear head on an intermediate layer of a frozen Qwen3-VL backbone, trained to score a web caption above a perturbed version of the same caption; labeled data enters only to select the layer. The layer is the decisive choice, worth 5.8 points over the last layer, and one recipe transferred without re-tuning beats or at least matches GPT-4o on three benchmarks at 32B, 6.6 points ahead on VL-RewardBench, from a few thousand parameters at about a thousandth of fine-tuning compute. At an equal pair budget, perturbations teach a frozen head 3 to 5 points more than curated RLAIF-V pairs. Because the backbone is frozen, the objective is convex, and the perturbation sampler specifies the reward, which the benchmark does not identify: two heads trained on disjoint halves of the same perturbations tie on the benchmark and differ by 6.4 points in hallucination judging. Retraining the head on the policy's own verifier-labeled candidates cuts caption hallucination by 5.1 CHAIR points and lifts image-generation pass rate by 5.4, while scoring lower on every reward benchmark. Together, an intermediate-layer probe, free same-image perturbations, and a verifier-driven bootstrap turn give a recipe for multimodal reward modeling that needs no annotator, costs a fraction of fine-tuning, and is specified by the comparisons it is trained on rather than by a benchmark rank.},
+  url={https://arxiv.org/abs/2610.12707},
+  keywords={preprint},
+}
+
+@article{azime2026afriGuard,
+  title={AfriGuard: Safety and Robust Refusal For African Languages},
+  author={Azime, Israel Abebe and Alabi, Jesujoba O. and Maab, Iffat and Cai, Alexander D. and Belay, Tadesse Destaw and Tonja, Atnafu Lambebo and Kgomo, Jonas and Alabi, Folasade and Osei, Salomey and Aliyu, Saminu Muhammad and Aguobi, Nkechinyere Faith and Balcha, Bontu Fufa and Sibanda, Blessing and David, Davis and Mboup, Mouhamadane and Abolade, Daud and Putini, Neo and Powell, Louis and Brantley, Kianté and Slusallek, Philipp and Klakow, Dietrich and Kreutzer, Julia},
+  booktitle=long-PREPRINT,
+  shorttitle=PREPRINT,
+  journal={arXiv preprint arXiv:2610.26474},
+  year={2026},
+  abstract={Large language models (LLMs) designed to interact with users are typically trained to respond appropriately to harmful or toxic content. However, ensuring appropriate responses becomes more challenging in diverse linguistic and cultural contexts, where safety risks may be expressed or interpreted differently. Building safe AI systems therefore requires detecting safety risks, understanding their nature, and responding appropriately, while accounting for linguistic and cultural variations that add complexity to each stage. In this work, we introduce AfriGuard, a culturally grounded multilingual dataset for studying harmful intent, safety-category understanding, and refusal behavior across 10 African languages and English. Our findings reveal that guardrail models underperform both open- and closed-source LLMs on safety-intent and safety-category classification, while models show limited understanding of appropriate safety behavior, scoring below 60\% F1. We further find that models often fail to respond appropriately to unsafe prompts not because they explicitly refuse, but because they produce linguistically inadequate responses that result in incidental non-assistance rather than proper refusals. Finally, using AfriGuard, we develop efficient guardrail models that achieve performance competitive with models up to 30x larger, introduce refusal detectors that improve average performance by 43.9\% over existing detectors, and demonstrate that supervised fine-tuning can substantially improve overall safety performance.},
+  url={https://arxiv.org/abs/2610.26474},
+  keywords={preprint},
+}
