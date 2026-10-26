@@ -1,0 +1,200 @@
+{
+  "experience": [
+    {
+      "institution": "Harvard University",
+      "date": "2024 -- present",
+      "title": "Assistant Professor",
+      "details": [
+        "Kempner Institute and School of Engineering and Applied Sciences"
+      ]
+    },
+    {
+      "institution": "Cornell University",
+      "date": "2022 -- 2024",
+      "title": "Postdoctoral Associate",
+      "details": [
+        "Department of Computer Science"
+      ]
+    },
+    {
+      "institution": "Microsoft Research",
+      "date": "2021",
+      "title": "Research Intern, Redmond",
+      "details": []
+    },
+    {
+      "institution": "Microsoft Research",
+      "date": "2020",
+      "title": "Research Intern, Montréal",
+      "details": []
+    },
+    {
+      "institution": "Microsoft Research",
+      "date": "2019",
+      "title": "Research Intern, NYC",
+      "details": []
+    },
+    {
+      "institution": "Microsoft Research",
+      "date": "2018",
+      "title": "Research Intern, NYC",
+      "details": []
+    },
+    {
+      "institution": "US Department of Defense",
+      "date": "2015 -- 2017",
+      "title": "Cyber Security Data Scientist",
+      "details": []
+    },
+    {
+      "institution": "US Department of Defense",
+      "date": "2011 -- 2015",
+      "title": "Cyber Security Software Engineer",
+      "details": []
+    },
+    {
+      "institution": "US Department of Defense",
+      "date": "2010",
+      "title": "Software Engineer Intern",
+      "details": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Maryland, College Park",
+      "date": "2016 -- 2022",
+      "title": "Ph.D., Computer Science",
+      "details": [
+        "Advisor: Hal Daumé III.",
+        "Thesis title: Expert-In-The-Loop for Sequential Decisions and Predictions"
+      ]
+    },
+    {
+      "institution": "New York University, Center for Data Science",
+      "date": "2018 -- 2022",
+      "title": "Visiting Researcher, Computer Science",
+      "details": [
+        "Host: Kyunghyun Cho"
+      ]
+    },
+    {
+      "institution": "University of Maryland, Baltimore County",
+      "date": "2015 -- 2016",
+      "title": "M.Sc. Computer Science",
+      "details": [
+        "Thesis title: BCAP: A Pruning Technique to Reduce Over-fitting"
+      ]
+    },
+    {
+      "institution": "University of Maryland, Baltimore County",
+      "date": "2013 -- 2015",
+      "title": "B.Sc. Computer Science",
+      "details": [
+        "Minor in Mathematics"
+      ]
+    },
+    {
+      "institution": "The Community College of Baltimore County",
+      "date": "2011 -- 2013",
+      "title": "A.A. Computer Science and Mathematics",
+      "details": []
+    }
+  ],
+  "awards": [
+    {
+      "date": "2023",
+      "title": "Spotlight Talk ICLR",
+      "details": []
+    },
+    {
+      "date": "2022",
+      "title": "NSF Computing Innovation Fellowship (CIFellows)",
+      "details": []
+    },
+    {
+      "date": "2021",
+      "title": "Spotlight talk, Empirical Methods in Natural Language Processing",
+      "details": []
+    },
+    {
+      "date": "2021",
+      "title": "Spotlight talk, International Conference on Learning Representations",
+      "details": []
+    },
+    {
+      "date": "2021",
+      "title": "Spotlight talk, International Conference on Learning Representations",
+      "details": []
+    },
+    {
+      "date": "2021",
+      "title": "2nd place, The New York Academy of Sciences Star Talks",
+      "details": []
+    },
+    {
+      "date": "2021",
+      "title": "Ann G. Wylie Dissertation Fellowship",
+      "details": []
+    },
+    {
+      "date": "2020",
+      "title": "Microsoft Dissertation Research Grant",
+      "details": []
+    },
+    {
+      "date": "2019",
+      "title": "Spotlight Talk ICLR",
+      "details": []
+    },
+    {
+      "date": "2018",
+      "title": "ACM SIGHPC/Intel Computational and Data Science Fellowship",
+      "details": []
+    },
+    {
+      "date": "2017",
+      "title": "Sloan Research Fellowship",
+      "details": []
+    },
+    {
+      "date": "2016",
+      "title": "Louis Stokes Alliance for Minority Participation Bridge to the Doctorate Program Fellowship",
+      "details": []
+    },
+    {
+      "date": "2016",
+      "title": "University of Maryland College Park Dean’s Fellowship",
+      "details": []
+    },
+    {
+      "date": "2015",
+      "title": "Department of Defense Graduate Fellowship",
+      "details": []
+    },
+    {
+      "date": "2013",
+      "title": "Transfer-Scholarships in Information Technology and Engineering (T-SITE) Scholar",
+      "details": []
+    },
+    {
+      "date": "2013",
+      "title": "Maryland Senators and Delegates Scholarship",
+      "details": []
+    },
+    {
+      "date": "2013",
+      "title": "Transfer Student Alliance Scholarship",
+      "details": []
+    },
+    {
+      "date": "2013",
+      "title": "Howard P. Rawlings Educational Assistance Grant",
+      "details": []
+    },
+    {
+      "date": "2013",
+      "title": "CCBC Foundation General Scholarship",
+      "details": []
+    }
+  ]
+}
