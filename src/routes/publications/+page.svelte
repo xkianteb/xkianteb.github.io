@@ -6,12 +6,17 @@
 
   export let data: PageData
 
-  const bibArr= bibtexParse.entries(data.bibtex)
+  let bibArr: any[] = []
+  let books: any[] = []
+  let theses: any[] = []
+  let publications: any[] = []
   const hasKeyword = (item: any, keyword: string) =>
     String(item.KEYWORDS ?? "").split(/[\s,]+/).includes(keyword)
-  const books = bibArr.filter((item: any) => hasKeyword(item, "book"))
-  const theses = bibArr.filter((item: any) => hasKeyword(item, "thesis"))
-  const publications = bibArr.filter((item: any) =>
+
+  $: bibArr = bibtexParse.entries(data?.bibtex ?? "")
+  $: books = bibArr.filter((item: any) => hasKeyword(item, "book"))
+  $: theses = bibArr.filter((item: any) => hasKeyword(item, "thesis"))
+  $: publications = bibArr.filter((item: any) =>
     !hasKeyword(item, "book") && !hasKeyword(item, "thesis"))
   export const dataOrder = 'year'
 </script>
