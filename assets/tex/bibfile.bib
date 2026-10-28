@@ -163,16 +163,6 @@
   keywords={preprint, recent}
 }
 
-@inproceedings{peng2026rda,
-  title={Regularized Dual Averaging Actor-Critic},
-  author={Peng, Nianli and Gordon, Geoff and Brantley, Kianté},
-  booktitle=long-PREPRINT,
-  shorttitle=PREPRINT,
-  year={2026},
-  abstract={Policy gradient methods in reinforcement learning (RL) are often viewed as stochastic gradient descent on a non-stationary objective: as the policy evolves, previously collected trajectories become off-policy, making sample-efficient data reuse a central challenge. Existing approaches typically rely on importance sampling, which can suffer high variance, or on gradient estimators tailored to differentiable (continuous) action spaces that do not directly extend to discrete control. We propose a reduction-based view of actor learning in which policy optimization is cast as fitting the cumulative advantage signal generated over time, replacing per-iteration policy-gradient steps with regularized dual-averaging updates on accumulated advantage feedback. 
-Concretely, we introduce Regularized Dual Averaging Actor-Critic (RDA2C), which maintains regularized cumulative dual variables (averaged advantage gradients) and updates the policy via a follow-the-regularized-leader style rule. This formulation enables principled reuse of past data without importance sampling and without reliance on differentiable action spaces. We show that the regret of RDA2C decomposes into two terms: a universally sublinear optimization term and an additional term that depends on the behavior of the critic learner. The latter is sublinear in simple cases (e.g., realizable linear critics) and is empirically small even with expressive function approximation. Our regret bound implies that RDA2C improves policy performance over time. Empirically, we demonstrate that RDA2C is competitive with standard baselines on high-dimensional continuous-control benchmarks while also performing well in discrete-action settings.},
-  keywords={preprint}
-}
 
 @inproceedings{ritter2026llms,
   title={LLMs Can Learn to Reason Via Off-Policy RL},
@@ -240,7 +230,6 @@ Concretely, we introduce Regularized Dual Averaging Actor-Critic (RDA2C), which 
   year={2025},
   abstract={Reinforcement learning (RL) has emerged as a powerful tool for fine-tuning large language models (LLMs) to improve complex reasoning abilities. However, state-of-the-art policy optimization methods often suffer from high computational overhead and memory consumption, primarily due to the need for multiple generations per prompt and the reliance on critic networks or advantage estimates of the current policy. In this paper, we propose  A*-PO, a novel two-stage policy optimization framework that directly approximates the optimal advantage function and enables efficient training of LLMs for reasoning tasks. In the first stage, we leverage offline sampling from a reference policy to estimate the optimal value function  V *, eliminating the need for costly online value estimation. In the second stage, we perform on-policy updates using a simple least-squares regression loss with only a single generation per prompt. Theoretically, we establish performance guarantees and prove that the KL-regularized RL objective can be optimized without requiring complex exploration strategies. Empirically,  A*-PO achieves competitive performance across a wide range of mathematical reasoning benchmarks, while reducing training time by up to 2x and peak memory usage by over 30\% compared to PPO, GRPO, and REBEL.},
   url={https://proceedings.neurips.cc/paper_files/paper/2025/hash/de8e1aebdb1e8a96970a58a641eac3cc-Abstract-Conference.html},
-  keywords={recent}
 }
 
 @article{gao2026p1,
@@ -252,7 +241,7 @@ Concretely, we introduce Regularized Dual Averaging Actor-Critic (RDA2C), which 
   year={2026},
   abstract={Prompt optimization improves language models without updating their weights by searching for a better system prompt, but its effectiveness varies widely across tasks. We study what makes a task amenable to prompt optimization. We show that the reward variance across different system prompts can be decomposed into two components: variance among responses, which captures generation stochasticity, and variance among system prompts, which captures differences in system prompt quality. Prompt optimization succeeds when variance among system prompts is sufficiently large, but fails when variance among responses dominates the variance of the system prompts. Surprisingly, we further show that scaling to more user prompts can hurt optimization by reducing variance among system prompts, especially on heterogeneous datasets where different user prompts favor different system prompts. Motivated by this insight, we propose p1, a simple user prompt filtering method that selects a small subset of user prompts with high variance across candidate system prompts. This subset of user prompts allows one to distinguish a good system prompt from a bad one, making system optimization easier. Experiments on reasoning benchmarks show that p1 substantially improves prompt optimization over training on the full dataset and outperforms strong baselines such as GEPA. Notably, training on only two prompts from AIME 24 yields a system prompt that generalizes well to other reasoning benchmarks.},
   url={https://arxiv.org/abs/2604.08801},
-  keywords={preprint},
+  keywords={preprint, recent},
 }
 
 @inproceedings{wang2026value,
